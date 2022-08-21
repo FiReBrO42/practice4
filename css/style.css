@@ -1254,7 +1254,6 @@ section {
 .ham-menu_game_content {
     position: relative;
     width: 100%;
-    height: 600px;
     overflow-y: scroll;
 }
 .ham-menu_1 ,.ham-menu_2 ,.ham-menu_3 {
@@ -1312,7 +1311,6 @@ section {
 }
 .ham-menu_btn_sign_out_link {
     position: absolute;
-
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -1388,9 +1386,6 @@ section {
 }
 /* RWD手機 */
 @media (max-width:549px){ 
-    .ham-menu_game_content {
-        height: 420px;
-    }
     .ham-menu_1, .ham-menu_2, .ham-menu_3 {
         border-bottom: .1px solid rgba(255, 255, 255, 0.5);    
     }
@@ -1425,15 +1420,29 @@ section {
         line-height: 2rem;
     }
 }
-@media (min-width:375px){ 
+@media (min-width:375px ){ 
     .ham-menu_btn_sign_out_link  {
-        top: 88%;
+        top: 590px;
+    }
+    .ham-menu_game_content {
+        height: 60%;
+    }
+}
+@media (min-width:375px ) and (min-height:668px){ 
+    .ham-menu_btn_sign_out_link  {
+        top: 590px;
+    }
+    .ham-menu_game_content {
+        height: 55%;
     }
 }
 /* RWD大型裝置 */
 @media (min-width:550px){ 
+    .ham-menu_btn_sign_out_link  {
+        top: 80%;
+    }
     .ham-menu_game_content {
-        height: 600px;
+        height: 50%;
     }
     .ham-menu_1, .ham-menu_2, .ham-menu_3 {
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);    
@@ -1467,9 +1476,6 @@ section {
     .ham-menu_btn_sign_out {
         font-size: 1.5rem;
         line-height: 3rem;
-    }
-    .ham-menu_btn_sign_out_link  {
-        top: 85%;
     }
 }
 /* index.html */
