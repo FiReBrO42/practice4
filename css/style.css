@@ -1251,6 +1251,12 @@ section {
     }
 }
 /* ham-menu_1 */
+/* .ham-menu-game_content {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+} */
 .ham-menu_1 ,.ham-menu_2 ,.ham-menu_3 {
     display: flex;
     flex-direction: column;
@@ -1417,6 +1423,11 @@ section {
     }
     .ham-menu_btn_sign_out_link  {
         bottom: 2rem;
+    }
+}
+@media (min-width:413px){
+    .ham-menu_btn_sign_out_link  {
+        bottom: 8rem;
     }
 }
 /* RWD大型裝置 */
