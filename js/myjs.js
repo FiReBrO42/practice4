@@ -158,12 +158,3 @@ function copyfn(id){
     document.execCommand ("Copy");
     alert("複製成功")
     }
-
-/* RWD 手機  網址欄 工具欄高度*/
-function safariHacks() {
-    let windowsVH = window.innerHeight / 100;
-    document.querySelector('#ham-menu').style.setProperty('--vh', windowsVH + 'px');
-    window.addEventListener('resize', function() {
-        document.querySelector('#ham-menu').style.setProperty('--vh', windowsVH + 'px');
-    });
-};
