@@ -1085,6 +1085,11 @@ section {
     transform: translateX(0%);
     transition: all 0.2s  ease;
 }
+.ham-menu_aside_content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 .ham-menu_aside_bg {
     position: absolute;
     z-index: -1;
@@ -1300,7 +1305,6 @@ section {
     fill: var(--yellow);
 }
 .ham-menu_btn_sign_out_link {
-    z-index: 999;
     position: absolute;
     bottom: 3rem;
     left: 50%;
@@ -1412,7 +1416,7 @@ section {
         line-height: 2rem;
     }
     .ham-menu_btn_sign_out_link  {
-        bottom: 4rem;
+        bottom: 2rem;
     }
 }
 /* RWD大型裝置 */
