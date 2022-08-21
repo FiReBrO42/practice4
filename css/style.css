@@ -1300,6 +1300,7 @@ section {
     fill: var(--yellow);
 }
 .ham-menu_btn_sign_out_link {
+    z-index: 999;
     position: absolute;
     bottom: 3rem;
     left: 50%;
