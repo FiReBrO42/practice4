@@ -1281,7 +1281,7 @@ section {
     background-color: rgba(232, 253, 95, 0.416);
 }
 .ham-menu_1.active  .ham-menu_1_title_wrapper:active, .ham-menu_2.active  .ham-menu_1_title_wrapper:active, .ham-menu_3.active  .ham-menu_1_title_wrapper:active{
-    transition: all 0.2s linear;
+    transition: all 0.2s linear; 
     background-color: rgba(232, 253, 95, 0.6);
 }
 .ham-menu_1_title {
@@ -1312,7 +1312,7 @@ section {
 }
 .ham-menu_btn_sign_out_link {
     position: absolute;
-    bottom: 3rem;
+
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -1427,12 +1427,7 @@ section {
 }
 @media (min-width:375px){ 
     .ham-menu_btn_sign_out_link  {
-        bottom: 3rem;
-    }
-}
-@media (min-width:413px){ 
-    .ham-menu_btn_sign_out_link  {
-        bottom: 7rem;
+        top: 88%;
     }
 }
 /* RWD大型裝置 */
@@ -1474,7 +1469,7 @@ section {
         line-height: 3rem;
     }
     .ham-menu_btn_sign_out_link  {
-        bottom: 7rem;
+        top: 85%;
     }
 }
 /* index.html */
