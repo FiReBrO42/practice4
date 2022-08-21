@@ -1312,7 +1312,7 @@ section {
 }
 .ham-menu_btn_sign_out_link {
     position: absolute;
-    bottom: 3rem;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, 0);
 }
