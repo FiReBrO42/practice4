@@ -1,0 +1,2803 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+@font-face {
+    font-family: "youshebiaotihei";
+    src: url(../font/YouSheBiaoTiHei-2.ttf);
+}
+/* 
+font-family: "youshebiaotihei",'Noto Sans SC',sans-serif;
+font-family: 'Noto Sans SC', sans-serif;
+*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    width: 100%;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    color:var(--font-color);
+    background-color: var(--background-color);
+    margin: 0;
+    min-height: 100%;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+/* 顏色 */
+:root {
+    --background-color: #141414;
+    --font-color:#fff;
+    --announcement:#fff000;
+    --orange:#f5ad47;
+    --black:#040000;
+    --red:#e50012;
+    --yellow:#eee326;
+    --light-yellow:#f8e79b;
+    --money-yellow:#eee326;
+    --green:#00913a;
+    --blue:#12112c;
+    --nothing:hsla(0,0%,100%,.7);
+    --gray:rgb(200, 200, 200);
+}
+/* 共用區 */
+::-webkit-scrollbar {
+    display: none;
+}
+section {
+    display: flex;
+    position: relative;
+}
+.main {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+::placeholder {
+    color: var(--font-color);
+    opacity: 1;
+}
+/* cursor */
+.main_contain_2_btn_bg:hover ,.main_contain_2_btn_title:hover {
+    cursor: pointer;
+}
+.ham-menu_1_btn_arrow_down:hover {
+    cursor: pointer;
+}
+.ham-menu_1_title_wrapper:hover {
+    cursor: pointer;
+}
+/* signout_card */
+.signout_card_wrapper {
+    position: fixed;
+    opacity: 0;
+}
+.signout_card_wrapper.show {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+.signout_card_wrapper_bg {
+    opacity: 0;
+}
+.signout_card_wrapper_bg.show {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    opacity: 1;
+    background-color: rgba(17, 17, 17, 0.6);
+    transition: all 0.3s linear;
+}
+.signout_card {
+    opacity: 0;
+}
+.signout_card.show {
+    z-index: 10;
+    opacity: 1;
+    position: relative;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 1px solid transparent;
+    border-image: linear-gradient(45deg,#f5ad47,#fff2c0 50%,#f5ad47);
+    border-image-slice: 4;
+    transition: all 0.1s 0.2s linear;
+}
+.signout_card_txt {
+    font-size: 1.3rem;
+    color: var(--orange);
+    margin-bottom: 1rem;
+}
+.signout_card_btn_wrapper {
+    position: absolute;
+    bottom: 0.7rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.signout_card_btn_no {
+    height: 36px;
+    padding: 0 1rem;
+    transition: all 0.3s linear;
+    background-color:  #757575;
+    border-radius: 5px;
+}
+.signout_card_btn_no:hover {
+    background-color:  #868686;
+    cursor: pointer;
+}
+.signout_card_btn_no:active {
+    background-color:  #9b9b9b;
+}
+.signout_card_btn_yes {
+    height: 36px;
+    padding: 0 1rem;
+    transition: all 0.3s linear;
+    background-color:  var(--orange);
+    border-radius: 5px;
+}
+.signout_card_btn_yes:hover {
+    background-color: #ffbb5c;
+    cursor: pointer;
+}
+.signout_card_btn_yes:active {
+    background-color: #ffcb82;
+}
+.signout_card_btn_no p , .signout_card_btn_yes p{
+    color: var(--font-color);
+    font-size: 1rem;
+    line-height: 36px;
+}
+/* contact_card */
+.contact_card_wrapper {
+    position: fixed;
+    opacity: 0;
+    display: none;
+}
+.contact_card_wrapper.show {
+    z-index: 99;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    opacity: 1;
+    width: 200px;
+    height: 200px;
+    transition: all 0.2s linear;
+    background-color: rgba(18, 17, 44,.9);
+    border: 1px solid transparent;
+    border-image: linear-gradient(45deg,#f5ad47,#fff2c0 50%,#f5ad47);
+    border-image-slice: 4;
+}
+.contact_card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact_card_btn_close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.contact_card_img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+}
+.contact_card_img img {
+    height: 100%;
+    object-fit: contain;
+}
+.contact_card_img_sub {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--font-color);
+    text-align: center;
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    
+}
+/* game_card */
+.game_card_wrapper {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: all 0.2s linear;
+}
+.game_card_wrapper.show {
+    z-index: 20;
+    position: absolute;
+    top: 287px;
+    left: 47.5px;
+    opacity: 1;
+    width: unset;
+    height: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+.game_card {
+    opacity: 0;
+}
+.game_card.show {
+    z-index: 10;
+    opacity: 1;
+    position: relative;
+    width: 460px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(18, 17, 44, 0.9);
+    transition: all 0.1s 0.2s linear;
+}
+.game_card_title_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+.game_card_title {
+    font-size: 2rem;
+    font-family: "youshebiaotihei",'Noto Sans SC',sans-serif;
+}
+.game_card_content {
+    display: block;
+    margin-top: 1rem;
+}
+.game_card_content_list_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.game_card_content_list {
+    position: relative;
+    width: calc(100% / 4);
+    padding: 10px 15px;
+}
+.game_card_content_list:hover:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    box-shadow: 0px 0px 20px 22px var(--font-color);
+    opacity: 0.2;
+    mix-blend-mode: screen;
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .game_card_wrapper.show {
+        top: 195px;
+        left: 32.5px;
+    }
+    .game_card.show {
+        width: 310px;
+        height: 310px;
+    }
+    .game_card_title_wrapper {
+        margin-top: 1rem;    
+    }
+    .game_card_title {
+        font-size: 1.2rem;
+    }
+    .game_card_content {
+        padding: 0 1rem;
+    }        
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .game_card_wrapper.show {
+        top: 287px;
+        left: 47.5px;
+    }
+    .game_card.show {
+        width: 460px;
+        height: 460px;
+    }
+    .game_card_title_wrapper {
+        margin-top: 1.5rem;    
+    }
+    .game_card_title {
+        font-size: 2rem;
+    }
+    .game_card_content {
+        padding: 0 2rem;
+    }        
+}
+/* news_card */
+.news_card_wrapper {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: all 0.2s linear;
+}
+.news_card_wrapper.show {
+    z-index: 20;
+    position: absolute;
+    top: 287px;
+    left: 47.5px;
+    opacity: 1;
+    width: unset;
+    height: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+.news_card {
+    display: none;
+    opacity: 0;
+}
+.news_card.show {
+    z-index: 10;
+    opacity: 1;
+    position: relative;
+    width: 460px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(18, 17, 44, 0.9);
+    transition: all 0.1s 0.2s linear;
+}
+.news_card_title_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+.news_card_title {
+    font-size: 2rem;
+    font-family: "youshebiaotihei",'Noto Sans SC',sans-serif;
+}
+.news_card_content {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0 2rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .news_card_wrapper.show {
+        top: 195px;
+        left: 32.5px;
+    }
+    .news_card.show {
+        width: 310px;
+        height: 310px;
+    }
+    .news_card_title_wrapper {
+        margin-top: 1rem;    
+    }
+    .news_card_title {
+        font-size: 1.2rem;
+    }
+    .news_card_content {
+        padding: 0 1rem;
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .news_card_wrapper.show {
+        top: 287px;
+        left: 47.5px;
+    }
+    .news_card.show {
+        width: 460px;
+        height: 460px;
+    }
+    .news_card_title_wrapper {
+        margin-top: 1.5rem;    
+    }
+    .news_card_title {
+        font-size: 2rem;
+    }
+    .news_card_content {
+        padding: 0 2rem;
+    }
+}
+/* news_card_1 */
+.news_card_item  {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+.news_card_item_title_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.news_card_item_title {
+    line-height: 2.3rem;
+    font-size: 1rem;
+    color: var(--font-color);
+    font-weight: 300;
+}
+.news_card_item.active  .news_card_item_title{
+    color: var(--yellow);
+}
+.news_card_item_btn_arrow_down {
+    width: 18px;
+    padding: 0.5rem 0;
+    transition: all 0.2s linear;
+}
+.news_card_item.active .news_card_item_btn_arrow_down {
+    transform: rotate(-180deg);
+    transition: all 0.2s linear;
+}
+.news_card_item_btn_arrow_down svg {
+    fill: var(--font-color);
+    transition: all 0.2s linear;
+}
+.news_card_item.active .news_card_item_btn_arrow_down svg  {
+    fill: var(--yellow);
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .news_card_item_title {
+        line-height: 2rem;
+        font-size: 12px;
+    }
+    .news_card_item_btn_arrow_down {
+        width: 12px;
+    }    
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .news_card_item_title {
+        line-height: 2.3rem;
+        font-size: 1rem;
+    }
+    .news_card_item_btn_arrow_down {
+        width: 18px;
+    }    
+}
+/* news_card_1_child */
+.news_card_item_1_child_title_wrapper {
+    margin-left: 0rem;
+}
+.news_card_item_1_child_title {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: var(--font-color);
+    font-weight: 300;
+}
+.news_card_item_1_child {
+    display: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .news_card_item_1_child_title {
+        font-size: 12px;
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .news_card_item_1_child_title {
+        font-size: 1rem;
+    }
+}
+/* member_card */
+.member_card_wrapper {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: all 0.2s linear;
+}
+.member_card_wrapper.show {
+    z-index: 25;
+    position: absolute;
+    top: 287px;
+    left: 47.5px;
+    opacity: 1;
+    width: unset;
+    height: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+.member_card {
+    opacity: 0;
+}
+.member_card.show {
+    z-index: 10;
+    opacity: 1;
+    position: relative;
+    width: 460px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(18, 17, 44, 0.9);
+    transition: all 0.1s 0.2s linear;
+}
+.member_card_title_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+.member_card_title {
+    font-size: 2rem;
+    font-family: "youshebiaotihei",'Noto Sans SC',sans-serif;
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .member_card_wrapper.show {
+        top: 195px;
+        left: 32.5px;
+    }
+    .member_card.show {
+        width: 310px;
+        height: 310px;
+    }
+    .member_card_title_wrapper {
+        margin-top: 1rem;    
+    }
+    .member_card_title {
+        font-size: 1.2rem;
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .member_card_wrapper.show {
+        top: 287px;
+        left: 47.5px;
+    }
+    .member_card.show {
+        width: 460px;
+        height: 460px;
+    }
+    .member_card_title_wrapper {
+        margin-top: 1.5rem;    
+    }
+    .member_card_title {
+        font-size: 2rem;
+    }
+}
+/* member_card_nav */
+.member_card_nav_wrapper {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+.member_card_nav_list_wrapper {
+    display: flex;
+}
+.member_card_nav_list {
+    position: relative;
+    width: calc(100% / 4);
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.member_card_nav_list:hover {
+    cursor: pointer;
+}
+.member_card_nav_list:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: var(--font-color);
+    opacity: .4;
+    transition: all 0.2s linear;
+}
+.member_card_nav_list:active::after {
+    background-color: var(--font-color);
+    opacity: .6;
+}
+.member_card_nav_list h2 {
+    font-size: 1rem;
+    font-weight: 300;
+}
+.member_card_content {
+    display: flex;
+    width: 460px;
+    height: calc(460px - 9rem );
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+}
+.member_card_content_list_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .member_card_nav_list {
+        border: 0.1px solid rgba(255, 255, 255, 0.3);
+        height: 1.5rem;    
+    }
+    .member_card_nav_list h2 {
+        font-size: 12px;
+    }
+    .member_card_content {
+        width: 310px;
+        height: calc(310px - 6.2rem );
+    }     
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .member_card_nav_list {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        height: 2rem;    
+    }
+    .member_card_nav_list h2 {
+        font-size: 1rem;
+    }
+    .member_card_content {
+        width: 460px;
+        height: calc(460px - 9rem );
+    }      
+}
+/* member_profile */
+#member_profile {
+    padding: 0 3rem;
+}
+.member_card_nav_content_wrapper {
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(0);
+    transition: all 0.2s ease;
+}
+.member_card_nav_content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.member_profile_top {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.member_profile_top_img {
+    display: flex;
+    align-items: center;
+}
+.member_profile_top_img img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+.member_profile_top_img_txt {
+    font-size: 0.8rem;
+    color: var(--font-color);
+}
+.member_profile_titile {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--font-color);
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .member_card_nav_content_wrapper {
+        width: 310px;
+    }
+    #member_profile {
+        padding: 0 2rem;    
+    }
+    .member_card_nav_content {
+        margin-top: 0.5rem;
+    }
+    .member_profile_top_img img {
+        width: 45px;
+        height: 45px;
+    }
+    .member_profile_top_img_txt {
+        font-size: 12px;
+        transform: scale(.8);
+    }
+    .member_profile_titile {
+        font-size: 0.9rem;
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .member_card_nav_content_wrapper {
+        width: 460px;
+    }
+    #member_profile {
+        padding: 0 3rem;    
+    }
+    .member_card_nav_content {
+        margin-top: 1rem;
+    }
+    .member_profile_top_img img {
+        width: 65px;
+        height: 65px;    
+    }
+    .member_profile_top_img_txt {
+        font-size: 0.8rem;
+    }
+    .member_profile_titile {
+        font-size: 1.4rem;
+    }
+}
+/* btn */
+.member_profile_top_btn_link {
+    position: relative;
+
+}
+.member_profile_top_btn_wrapper {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 0px 18px;
+    background-color: var(--orange);
+    border-radius: 99px;
+    transition: all 0.3s linear;
+}
+.member_profile_top_btn_wrapper:hover {
+    transition: all 0.3s linear;
+    background-color: #ffbb5c;
+}
+.member_profile_top_btn_wrapper:active {
+    transition: all 0.3s linear;
+    background-color: #ffcb82;
+}
+.member_profile_top_btn {
+    font-size: 1rem;
+    color: var(--font-color);
+    line-height: 1.7rem;
+}
+.member_profile_txt_wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 5px 0 5px 1rem;
+    background-color: rgba(255,255,255,.3);
+    border-radius: 15px;
+    margin-bottom: 0.8rem;
+    overflow: hidden;
+}
+.member_profile_title {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    width: 4.5rem;
+    max-width: 4.5rem;
+}
+.member_profile_txt {
+    font-size: 1rem;
+    width: 14rem;
+}
+.member_profile_txt_btn_copy {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+}
+.member_profile_txt_btn_copy:hover {
+    cursor: pointer;
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .member_profile_top_btn_wrapper {
+        padding: 0px 12px;    
+    }
+    .member_profile_top_btn {
+        font-size: 12px;
+        line-height: 1.2rem;
+    }
+    .member_profile_txt_wrapper {
+        padding: 5px 0 5px .7rem;
+        margin-bottom: 0.5rem;
+        border-radius: 10px;    
+    }
+    .member_profile_title {
+        font-size: 12px;
+        line-height: 1.3rem;
+        width: 4.2rem;
+        max-width: 4.2rem;
+    }
+    .member_profile_txt {
+        font-size: 12px;
+        width: 8.5rem;
+        line-height: 1.3rem;
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .member_profile_top_btn_wrapper {
+        padding: 0px 18px;    
+    }
+    .member_profile_top_btn {
+        font-size: 1rem;
+        line-height: 1.7rem;
+    }
+    .member_profile_txt_wrapper {
+        padding: 5px 0 5px 1rem;
+        margin-bottom: 0.8rem;
+        border-radius: 15px;    
+    }
+    .member_profile_title {
+        font-size: 1rem;
+        line-height: 1.8rem;
+        width: 4.5rem;
+        max-width: 4.5rem;
+    }
+    .member_profile_txt {
+        font-size: 1rem;
+        width: 14rem;
+    }
+}
+/* recordlist */
+.recordlist_top_wrapper {
+    display: flex;
+    width: 100%;
+}
+.recordlist_title_wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 0;
+    border: 0 solid var(--background-color);
+    background-color: var(--light-yellow);
+}
+.recordlist_title_wrapper:nth-child(1) {
+    flex: 2;
+}
+.recordlist_title_wrapper:nth-child(n+2):nth-child(-n+5) {
+    flex: 1;
+}
+.recordlist_title {
+    font-size: 0.9rem;
+    color: var(--black);
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .recordlist_title_wrapper {
+        padding: 3px 0;
+    }
+    .recordlist_title {
+        font-size: 12px;
+        transform: scale(0.9);    
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .recordlist_title_wrapper {
+        padding: 6px 0;
+    }
+    .recordlist_title {
+        font-size: 0.9rem;    
+    }
+}
+/* recordlist_content */
+.recordlist_content_wrapper {
+    display: flex;
+    width: 100%;
+}
+.recordlist_content_txt_wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 0;
+}
+.recordlist_content_wrapper:nth-child(even) .recordlist_content_txt_wrapper {
+    background-color: var(--black);
+}
+.recordlist_content_wrapper:nth-child(odd) .recordlist_content_txt_wrapper {
+    background-color: #3d3a39;
+}
+.recordlist_content_txt_wrapper:nth-child(1) {
+    flex: 2;
+}
+.recordlist_content_txt_wrapper:nth-child(n+2):nth-child(-n+5) {
+    flex: 1;
+}
+.recordlist_content_txt {
+    font-size: 0.9rem;
+    color: var(--font-color);
+    font-weight: 300;
+}
+.withdrawal {
+    color: var(--red);
+}
+.success {
+    color: var(--yellow);
+}
+.add_value {
+    color: var(--green);
+}
+.processing {
+    color: var(--green);
+}
+.txt-red {
+    color: var(--red);
+}
+.txt-green {
+    color: var(--green);
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .recordlist_content_txt_wrapper {
+        padding: 8px 0;
+    }
+    .recordlist_content_txt {
+        font-size: 12px;  
+        transform: scale(.9);  
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .recordlist_content_txt_wrapper {
+        padding: 9px 0;
+    }
+    .recordlist_content_txt {
+        font-size: 0.9rem;    
+    }
+}
+/* ham-menu */
+.ham-menu {
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.ham-menu.show {
+    opacity: 1;
+    z-index: 15;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.2s linear;
+}
+.ham-menu_mask {
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.ham-menu_mask.show {
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    opacity: .5;
+    transition: all 0.3s linear;
+}
+/* ham-menu_aside */
+.ham-menu_aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: all 0.2s ease;
+}
+.ham-menu_aside.show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 300px;
+    height: 100vh;
+    transform: translateX(0%);
+    transition: all 0.2s  ease;
+}
+.ham-menu_aside_bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    opacity: .9;
+}
+.ham-menu_logo_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.ham-menu_logo {
+    height: 48px;
+}
+.ham-menu_logo img {
+    height: 100%;
+}
+.ham-menu_member {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.ham-menu_member_level {
+    width: 70px;
+}
+.ham-menu_member_level_txt {
+    text-align: center;
+    font-size: 0.8rem;
+}
+.ham-menu_member_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 1rem;
+}
+.ham-menu_member_name_wrapper {
+    margin: auto 0;
+    margin-left: 1rem;
+}
+.ham-menu_member_name {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.ham-menu_member_money_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110%;
+    height: 120%;
+    border-radius: 999px;
+}
+.ham-menu_member_money_wrapper_link:hover .ham-menu_member_money_wrapper{
+    transition: all 0.2s linear;
+    background-color: #36355482;
+}
+.ham-menu_member_money_icon_money {
+    width: 24px;
+}
+.ham-menu_member_money_txt {
+    font-size: 1.2rem;
+    color: var(--yellow);
+    margin: 0 0.5rem;
+    font-weight: 300;
+}
+.ham-menu_member_money_icon_plus {
+    width: 24px;
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .ham-menu_member {
+        justify-content: flex-start;
+        padding-left: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: .1px solid rgba(255, 255, 255, 0.5);
+    }
+    .ham-menu_aside.show {
+        width: 185px;
+    }
+    .ham-menu_logo_wrapper {
+        padding: 0.5rem 0;
+    }
+    .ham-menu_logo {
+        height: 28px;
+    }
+    .ham-menu_member_level {
+        width: 45px;
+    }
+    .ham-menu_member_level_txt {
+        font-size: 12px;
+        transform: scale(.9);
+    }
+    .ham-menu_member_right {
+        padding-left: 0.2rem;
+    }
+    .ham-menu_member_name_wrapper {
+        margin-left: 0.7rem;
+    }
+    .ham-menu_member_name {
+        font-size: 1rem;
+    }
+    .ham-menu_member_money_icon_money {
+        width: 16px;
+    }
+    .ham-menu_member_money_txt {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+    .ham-menu_member_money_icon_plus {
+        width: 16px;
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .ham-menu_member {
+        justify-content: center;
+        padding-left: 0;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .ham-menu_aside.show {
+        width: 300px;
+    }
+    .ham-menu_logo_wrapper {
+        padding: 1rem 0;
+    }
+    .ham-menu_logo {
+        height: 48px;
+    }
+    .ham-menu_member_level {
+        width: 70px;
+    }
+    .ham-menu_member_level_txt {
+        font-size: 0.8rem;
+    }
+    .ham-menu_member_right {
+        padding-left: 1rem;
+    }
+    .ham-menu_member_name_wrapper {
+        margin-left: 1rem;
+    }
+    .ham-menu_member_name {
+        font-size: 1.5rem;
+    }
+    .ham-menu_member_money_icon_money {
+        width: 24px;
+    }
+    .ham-menu_member_money_txt {
+        font-size: 1.2rem;
+        margin: 0 0.5rem;
+    }
+    .ham-menu_member_money_icon_plus {
+        width: 24px;
+    }
+}
+/* ham-menu_1 */
+.ham-menu_1 ,.ham-menu_2 ,.ham-menu_3 {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.ham-menu_1 .ham-menu_1_title_wrapper:hover ,.ham-menu_2 .ham-menu_1_title_wrapper:hover ,.ham-menu_3 .ham-menu_1_title_wrapper:hover {
+    transition: all 0.2s linear;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.ham-menu_1 .ham-menu_1_title_wrapper:active ,.ham-menu_2 .ham-menu_1_title_wrapper:active ,.ham-menu_3 .ham-menu_1_title_wrapper:active {
+    transition: all 0.2s linear;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.ham-menu_1_title_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+.ham-menu_1.active  .ham-menu_1_title_wrapper:hover, .ham-menu_2.active  .ham-menu_1_title_wrapper:hover, .ham-menu_3.active  .ham-menu_1_title_wrapper:hover{
+    transition: all 0.2s linear;
+    background-color: rgba(232, 253, 95, 0.416);
+}
+.ham-menu_1.active  .ham-menu_1_title_wrapper:active, .ham-menu_2.active  .ham-menu_1_title_wrapper:active, .ham-menu_3.active  .ham-menu_1_title_wrapper:active{
+    transition: all 0.2s linear;
+    background-color: rgba(232, 253, 95, 0.6);
+}
+.ham-menu_1_title {
+    padding-left: 3rem;
+    line-height: 2.3rem;
+    font-size: 1rem;
+    color: var(--font-color);
+}
+.ham-menu_1.active  .ham-menu_1_title, .ham-menu_2.active  .ham-menu_1_title, .ham-menu_3.active  .ham-menu_1_title{
+    color: var(--yellow);
+}
+.ham-menu_1_btn_arrow_down {
+    width: 18px;
+    margin-right: 2rem;
+    padding: 0.5rem 0;
+    transition: all 0.2s linear;
+}
+.ham-menu_1.active .ham-menu_1_btn_arrow_down ,.ham-menu_2.active .ham-menu_1_btn_arrow_down ,.ham-menu_3.active .ham-menu_1_btn_arrow_down{
+    transform: rotate(-180deg);
+    transition: all 0.2s linear;
+}
+.ham-menu_1_btn_arrow_down svg {
+    fill: var(--font-color);
+    transition: all 0.2s linear;
+}
+.ham-menu_1.active .ham-menu_1_btn_arrow_down svg ,.ham-menu_2.active .ham-menu_1_btn_arrow_down svg ,.ham-menu_3.active .ham-menu_1_btn_arrow_down svg {
+    fill: var(--yellow);
+}
+.ham-menu_btn_sign_out_link {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.ham-menu_btn_sign_out_wrapper {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 250px;
+    height: 3rem;
+    background-color: var(--orange);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+.ham-menu_btn_sign_out_wrapper:hover {
+    transition: all 0.3s linear;
+    background-color: #ffbb5c;
+}
+.ham-menu_btn_sign_out_wrapper:active {
+    transition: all 0.3s linear;
+    background-color: #ffcb82;
+}
+.ham-menu_btn_sign_out {
+    font-size: 1.5rem;
+    color: var(--font-color);
+    line-height: 3rem;
+    font-weight: 300;
+}
+.ham-menu_1_child ,.ham-menu_2_child ,.ham-menu_3_child{
+    display: none;
+    width: 100%;
+}
+.ham-menu_1_child_link {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: 100%;
+    padding: 1rem 0 1rem 1rem;
+}
+.ham-menu_1_child_link:hover {
+    transition: all 0.2s linear;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.ham-menu_1_child_link:active {
+    transition: all 0.2s linear;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.ham-menu_1_child_link.nothing:active {
+    transition: all 0.2s linear;
+    background-color: unset;
+}
+.ham-menu_1_child_img_game {
+    width: 40px;
+}
+.ham-menu_1_child_title_wrapper {
+    margin-left: 0.5rem;
+}
+.ham-menu_1_child_title {
+    font-size: 1.1rem;
+    color: var(--font-color);
+    line-height: 2rem;
+}
+.ham-menu_1_child_link.nothing {
+    cursor: unset;
+    padding: 0;
+}
+.ham-menu_1_child_link.nothing:hover {
+    transition: all 0.2s linear;
+    background-color: unset;
+}
+.ham-menu_1_child_link.nothing .ham-menu_1_child_title {
+    color: var(--nothing);
+    font-size: 0.9rem;
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .ham-menu_1, .ham-menu_2, .ham-menu_3 {
+        border-bottom: .1px solid rgba(255, 255, 255, 0.5);    
+    }
+    .ham-menu_1_title {
+        padding-left: 1.5rem;
+        line-height: 1.4rem;
+        font-size: 12px;
+    }
+    .ham-menu_1_btn_arrow_down {
+        width: 12px;
+        margin-right: 1rem;
+        padding: 4px 0;
+    }    
+    .ham-menu_1_child_link {
+        padding: 0.5rem 0 0.5rem 1rem;;
+    }
+    .ham-menu_1_child_img_game {
+        width: 35px;
+    }
+    .ham-menu_1_child_title {
+        font-size: 12px;
+    }
+    .ham-menu_1_child_link.nothing .ham-menu_1_child_title {
+        font-size: 12px;
+    }
+    .ham-menu_btn_sign_out_wrapper {
+        width: 145px;
+        height: 2rem;
+    }
+    .ham-menu_btn_sign_out {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    .ham-menu_btn_sign_out_link  {
+        bottom: 2rem;
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .ham-menu_1, .ham-menu_2, .ham-menu_3 {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);    
+    }
+    .ham-menu_1_title {
+        padding-left: 3rem;
+        line-height: 2.3rem;
+        font-size: 1rem;    
+    }
+    .ham-menu_1_btn_arrow_down {
+        width: 18px;
+        margin-right: 2rem;
+        padding: 0.5rem 0;
+    }    
+    .ham-menu_1_child_link {
+        padding: 1rem 0 1rem 1rem;;
+    }
+    .ham-menu_1_child_img_game {
+        width: 40px;
+    }
+    .ham-menu_1_child_title {
+        font-size: 1.1rem;
+    }
+    .ham-menu_1_child_link.nothing .ham-menu_1_child_title {
+        font-size: 0.9rem;
+    }
+    .ham-menu_btn_sign_out_wrapper {
+        width: 250px;
+        height: 3rem;
+    }
+    .ham-menu_btn_sign_out {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+    .ham-menu_btn_sign_out_link  {
+        bottom: 3rem;
+    }
+}
+/* index.html */
+.main_contain {
+    z-index: 1;
+    width: 550px;
+    height: 100%;
+}
+.main_contain_basic {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.main_contain_basic_bg_wrapper {
+    position: relative;
+}
+.main_contain_basic_machine_bg_wrapper {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.main_contain_basic_machine_bg {
+    height: 100%;
+}
+.main_contain_basic_machine_bg img {
+    height: 100%;
+    object-fit: cover;
+}
+/* RWD手機 */
+@media (max-width:549px){
+     .main {
+        width: 100%;
+     }
+    .main_contain {
+        width: 375px;
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .main {
+        width: 100%;
+     }
+    .main_contain {
+        width: 550px;
+    }
+}
+/* main_contain_announcement */
+.main_contain_announcement_wrapper {
+    z-index: 5;
+    position: absolute;
+    top: 25.5%;
+    width: calc(100% - 4%);
+    height: 2rem;
+    left: 2%;
+    display: flex;
+    border-radius: 999px;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding-left: 1.5rem;
+    transition: all 0.8s ease;
+    overflow: hidden;
+    animation: announcement 0.8s 0.5s linear;
+}
+@keyframes announcement {
+    0% {
+        width: calc(100% - 91% );
+    }
+    50% {
+        width: calc(100% - 50% );        
+    }
+    100% {
+        width: calc(100% - 4%);
+    }
+}
+@keyframes announcement-mobile {
+    0% {
+        width: calc(100% - 87% );
+    }
+    50% {
+        width: calc(100% - 50% );        
+    }
+    100% {
+        width: calc(100% - 10%);
+    }
+}
+.main_contain_announcement_img {
+    position: absolute;
+    left: 0.9rem;
+    top: 0;
+    width: 1.4rem;
+    padding: 5px 0;
+}
+.main_contain_announcement_contain_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 2rem;
+}
+.main_contain_announcement_contain {
+    display: flex;
+}
+.main_contain_announcement_contain_list {
+    white-space: nowrap;
+    margin-right: 470px;
+}
+.main_contain_announcement_contain_list p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--announcement);
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .main_contain_announcement_wrapper {
+        width: calc(100% - 10% );
+        height: 1.5rem;
+        left: 5%;
+        animation: announcement-mobile 0.8s 0.5s linear ;
+    }
+    .main_contain_announcement_img {
+        left: 1.1rem;
+        width: 1rem;
+    }
+    .main_contain_announcement_contain_wrapper {
+        padding-left: 1.5rem;    
+    }
+    .main_contain_announcement_contain_list {
+        margin-right: 290px;
+    }
+    .main_contain_announcement_contain_list p {
+        font-size: 0.8rem;
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .main_contain_announcement_wrapper {
+        width: calc(100% - 4% );
+        height: 2rem;
+        left: 2%;
+        animation: announcement 0.8s 0.5s linear;
+    }
+    .main_contain_announcement_img {
+        left: 0.9rem;
+        width: 1.4rem;
+    }
+    .main_contain_announcement_contain_wrapper {
+        padding-left: 2rem;    
+    }
+    .main_contain_announcement_contain_list {
+        margin-right: 470px;
+    }
+    .main_contain_announcement_contain_list p {
+        font-size: 1rem;
+    }
+}
+/* main_contain_1 */
+.main_contain_1 {
+    position: absolute;
+    top: 24.5px;
+    left: 47.5px;
+    width: 453px;
+    height: 214px;
+}
+.main_contain_1_slick01_wrapper {
+    width: 100%;
+}
+.main_contain_1_slick01_list {
+    width: 100%;
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .main_contain_1 {
+        top: 16.5px;
+        left: 32px;
+        width: 310px;
+        height: 146px;
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .main_contain_1 {
+        top: 24.5px;
+        left: 47.5px;
+        width: 453px;
+        height: 214px;
+    }
+}
+/* main_contain_2 */
+.main_contain_2 {
+    position: absolute;
+    top: 287px;
+    left: 47.5px;
+    width: 453px;
+    height: 214px;
+    background-image: url(../img/bg/bg_home_02_middle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.main_contain_2_first {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    padding-top: 10px;
+}
+.main_contain_2_second {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.main_contain_2_btn_wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    width: 100px;
+    height: 100px;
+    margin: 0 1rem;
+}
+.main_contain_2_btn_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 999px;
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+}
+.main_contain_2_first .main_contain_2_btn_wrapper:nth-child(1) .main_contain_2_btn_bg{
+    background-image: url(../img/btn/btn_menu02.png);
+}
+.main_contain_2_first .main_contain_2_btn_wrapper:nth-child(2) .main_contain_2_btn_bg{
+    background-image: url(../img/btn/btn_news02.png);
+}
+.main_contain_2_second .main_contain_2_btn_wrapper:nth-child(1) .main_contain_2_btn_bg{
+    background-image: url(../img/btn/btn_game02.png);
+}
+.main_contain_2_second .main_contain_2_btn_wrapper:nth-child(2) .main_contain_2_btn_bg{
+    background-image: url(../img/btn/btn_member02.png);
+}
+.main_contain_2_second .main_contain_2_btn_wrapper:nth-child(3) .main_contain_2_btn_bg{
+    background-image: url(../img/btn/btn_contact02.png);
+}
+.main_contain_2_btn_title {
+    z-index: 15;
+    font-size: 1.8rem;
+    line-height: 1.2em;
+    font-family: "youshebiaotihei",'Noto Sans SC',sans-serif;
+}
+.main_contain_2_btn_img_fish {
+    z-index: 5;
+    width: 180px;
+    position: absolute;
+    display: block;
+}
+.main_contain_2_first .main_contain_2_btn_wrapper:nth-child(1) .main_contain_2_btn_img_fish {
+    animation: fish 5s linear infinite  ;
+}
+.main_contain_2_first .main_contain_2_btn_wrapper:nth-child(1) .main_contain_2_btn_img_fish img {
+    width: 40px;
+}
+.main_contain_2_first .main_contain_2_btn_wrapper:nth-child(2) .main_contain_2_btn_img_fish{
+    animation: fish 7s 0.2s linear infinite  ;
+}
+.main_contain_2_first .main_contain_2_btn_wrapper:nth-child(2) .main_contain_2_btn_img_fish img {
+    transform: rotate(-53deg);
+    width: 45px;
+}
+.main_contain_2_second .main_contain_2_btn_wrapper:nth-child(1) .main_contain_2_btn_img_fish{
+    animation: fish-re 5s 0.1s linear infinite  ;
+}
+.main_contain_2_second .main_contain_2_btn_wrapper:nth-child(1) .main_contain_2_btn_img_fish img {
+    transform: rotate(40deg);
+    width: 45px;
+}
+.main_contain_2_second .main_contain_2_btn_wrapper:nth-child(2) .main_contain_2_btn_img_fish{
+    animation: fish 7s 0.3s linear infinite  ;
+}
+.main_contain_2_second .main_contain_2_btn_wrapper:nth-child(2) .main_contain_2_btn_img_fish img {
+    transform: rotate(-13deg);
+    width: 30px;
+}
+.main_contain_2_second .main_contain_2_btn_wrapper:nth-child(3) .main_contain_2_btn_img_fish{
+    animation: fish 5s 0.1s linear infinite  ;
+}
+.main_contain_2_second .main_contain_2_btn_wrapper:nth-child(3) .main_contain_2_btn_img_fish img {
+    transform: rotate(-113deg);
+    width: 65px;
+}
+@keyframes fish {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes fish-re {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .main_contain_2 {
+        top: 195.5px;
+        left: 32px;
+        width: 310px;
+        height: 146px;
+    }
+    .main_contain_2_first {
+        padding: 5px;
+    }
+    .main_contain_2_btn_wrapper {
+        width: 65px;
+        height: 65px;
+    }
+    .main_contain_2_btn_bg {
+        width: 65px;
+        height: 65px;
+    }
+    .main_contain_2_btn_title {
+        font-size: 1.1rem;
+    }
+    .main_contain_2_btn_img_fish {
+        width: 120px;
+    }
+    .main_contain_2_first .main_contain_2_btn_wrapper:nth-child(1) .main_contain_2_btn_img_fish img {
+        width: 20px;
+    }
+    .main_contain_2_first .main_contain_2_btn_wrapper:nth-child(2) .main_contain_2_btn_img_fish img {
+        width: 28px;
+    }
+    .main_contain_2_second {
+        padding-bottom: 5px;
+    }
+    .main_contain_2_second .main_contain_2_btn_wrapper:nth-child(1) .main_contain_2_btn_img_fish img {
+        width: 26px;
+    }
+    .main_contain_2_second .main_contain_2_btn_wrapper:nth-child(2) .main_contain_2_btn_img_fish img {
+        width: 20px;
+    }
+    .main_contain_2_second .main_contain_2_btn_wrapper:nth-child(3) .main_contain_2_btn_img_fish img {
+        width: 36px;
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .main_contain_2 {
+        top: 287px;
+        left: 47.5px;
+        width: 453px;
+        height: 214px;
+    }
+    .main_contain_2_first {
+        padding: 10px;
+    }
+    .main_contain_2_btn_wrapper {
+        width: 100px;
+        height: 100px;
+    }
+    .main_contain_2_btn_bg {
+        width: 100px;
+        height: 100px;
+    }
+    .main_contain_2_btn_title {
+        font-size: 1.8rem;
+    }
+    .main_contain_2_btn_img_fish {
+        width: 180px;
+    }
+    .main_contain_2_first .main_contain_2_btn_wrapper:nth-child(1) .main_contain_2_btn_img_fish img {
+        width: 40px;
+    }
+    .main_contain_2_first .main_contain_2_btn_wrapper:nth-child(2) .main_contain_2_btn_img_fish img {
+        width: 45px;
+    }
+    .main_contain_2_second {
+        padding-bottom: 10px;
+    }
+    .main_contain_2_second .main_contain_2_btn_wrapper:nth-child(1) .main_contain_2_btn_img_fish img {
+        width: 45px;
+    }
+    .main_contain_2_second .main_contain_2_btn_wrapper:nth-child(2) .main_contain_2_btn_img_fish img {
+        width: 30px;
+    }
+    .main_contain_2_second .main_contain_2_btn_wrapper:nth-child(3) .main_contain_2_btn_img_fish img {
+        width: 65px;
+    }
+}
+/* main_contain_3 */
+.main_contain_3 {
+    position: absolute;
+    top: 523.5px;
+    left: 47.5px;
+    width: 453px;
+    height: 214px;
+    background-image: url(../img/bg/bg_home_02_bottom.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_contain_3_center {
+    position: relative;
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.25rem 5px;
+}
+.main_contain_3_center_bg_wrapper {
+    position: absolute;
+    z-index: 0;
+}
+.main_contain_3_center_contain {
+    position: relative;
+    z-index: 5;
+    width: 64px;
+    height: 95%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.main_contain_3_center_contain_list_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+.main_contain_3_center_contain_list {
+    position: relative;
+    height: 48px;
+    margin: 6px 0;
+}
+.main_contain_3_center_contain_list:hover:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    box-shadow: 0px 0px 15px 18px var(--font-color);
+    opacity: 0.2;
+    mix-blend-mode: screen;
+}
+.main_contain_3_center_contain_list_img {
+    height: 100%;
+}
+.main_contain_3_center_contain_list_img img{
+    height: 100%;
+}
+.main_contain_3_center_contain:nth-child(2) .main_contain_3_center_contain_list_wrapper {
+    animation: range 0.7s  0.3s ease-out  ;
+}
+.main_contain_3_center_contain:nth-child(3) .main_contain_3_center_contain_list_wrapper {
+    animation: range 0.9s  0.3s ease-out  ;
+}
+.main_contain_3_center_contain:nth-child(4) .main_contain_3_center_contain_list_wrapper {
+    animation: range 1.1s  0.3s ease-out  ;
+}
+.main_contain_3_center_contain:nth-child(5) .main_contain_3_center_contain_list_wrapper {
+    animation: range 1.3s  0.3s ease-out  ;
+}
+.main_contain_3_center_contain:nth-child(6) .main_contain_3_center_contain_list_wrapper {
+    animation: range 1.5s  0.3s ease-out  ;
+}
+@keyframes range {
+    0%{
+        top: -250%;
+    }
+    100% {
+        top: 0;
+    }
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .main_contain_3 {
+        top: 356.5px;
+        left: 32px;
+        width: 310px;
+        height: 146px;
+    }
+    .main_contain_3_center_contain_list {
+        height: 32px;
+        margin: 4px 0;
+    }
+    .main_contain_3_center_contain_list:hover:after {
+        box-shadow: 0px 0px 13px 15px var(--font-color);
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .main_contain_3 {
+        top: 523.5px;
+        left: 47.5px;
+        width: 453px;
+        height: 214px;
+    }
+    .main_contain_3_center_contain_list {
+        height: 48px;
+        margin: 6px 0;
+    }
+    .main_contain_3_center_contain_list:hover:after {
+        box-shadow: 0px 0px 15px 18px var(--font-color);
+    }
+}
+/* signin.html */
+.signin_card_wrapper {
+    position: absolute;
+    top: 5%; 
+    left: 50%;
+    transform: translate(-50%,0);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+    height: 600px;
+    padding: 2rem 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.signin_card_wrapper_bg {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    opacity: .95;
+}
+.signin_card_logo_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+.signin_card_logo {
+    width: 85%;
+}
+.signin_card_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 4rem;
+    margin-top: 2.5rem;
+}
+#acount {
+    position: relative;
+    width: 83%;
+}
+#acount input {
+    width: 100%;
+    height: 2.6rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+    color: var(--font-color);
+    padding: 0 1.5rem 0 3rem;
+    margin-top: 2.5rem;
+    border: none;
+}
+#acount::before {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 16px;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icon/icon_acount.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#password {
+    position: relative;
+    width: 83%;
+}
+#password input {
+    width: 100%;
+    height: 2.6rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+    color: var(--font-color);
+    padding: 0 1.5rem 0 3rem;
+    margin-top: 2.5rem;
+    border: none;
+}
+#password::before {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 16px;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icon/icon_password.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#remember {
+    margin-top: 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#remember input[type=checkbox]  {
+    z-index: 5;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+    cursor: pointer;
+}
+.icon_checkbox_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: var(--gray);
+    border-radius: 4px;
+}
+.icon_checkbox_wrapper::after {
+    content: "";
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/icon/icon_checkbox.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.icon_checkbox_wrapper::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200%;
+    height: 200%;
+    border-radius: 999px;
+    background-color: var(--font-color);
+    opacity: 0;
+    transition: all 0s linear;
+}
+#remember input[type=checkbox]:hover + .icon_checkbox_wrapper::before {
+    opacity: .2;
+    transition: all 0s linear;
+}
+#remember input[type=checkbox]:active + .icon_checkbox_wrapper::before {
+    opacity: .4;
+    transition: all 0.1s linear;
+}
+#remember input[type=checkbox]:checked + .icon_checkbox_wrapper {
+    background-color: var(--orange);
+}
+#remember span {
+    font-size: 0.8rem;
+    margin-left: 12px;
+}
+#submit {
+    position: relative;
+    width: 83%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+#submit input {
+    width: 250px;
+    height: 3rem;
+    background-color: var(--orange);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: var(--font-color);
+}
+.signin_card_form_signup {
+    width: 83%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 1.5rem;
+}
+.signin_card_form_signup_txt {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.signin_card_form_signup a {
+    position: relative;
+    color: var(--font-color);
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.signin_card_form_signup a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 120%;
+    height: 150%;
+    background-color: var(--font-color);
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.signin_card_form_signup a:hover::after {
+    opacity: .2;
+    transition: all 0.2s linear;
+}
+.signin_card_form_signup a:active::after {
+    opacity: .4;
+    transition: all 0.2s linear;
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .signin_card_wrapper {
+        height: 420px;
+        padding: 1.5rem 0;
+    }
+    .signin_card_form {
+        padding-left: 3rem;
+        margin-top: 1rem;
+    }
+    .signin_card_form_signup {
+        margin-top: 0.5rem;
+    }
+    .signin_card_form_signup_txt {
+        transform: scale(0.8);
+    }
+    .signin_card_form_signup a{
+        transform: scale(0.8);
+    }
+    #acount input {
+        height: 2.1rem;
+        font-size: 0.8rem;
+        padding: 0 1.5rem 0 2.5rem;
+        margin-top: 2rem;
+    }
+    #acount::before {
+        bottom: 10px;
+        left: 14px;
+        width: 16px;
+        height: 16px;
+    }
+    #password input {
+        height: 2.1rem;
+        font-size: 0.8rem;
+        padding: 0 1.5rem 0 2.5rem;
+        margin-top: 1.5rem;
+    }
+    #password::before {
+        bottom: 10px;
+        left: 14px;
+        width: 16px;
+        height: 16px;
+    }
+    #remember {
+        margin-top: 1.5rem;    
+    }
+    #remember input[type=checkbox] {
+        width: 14px;
+        height: 14px;
+    }
+    .icon_checkbox_wrapper {
+        width: 14px;
+        height: 14px;
+        border-radius: 3px;
+    }
+    .icon_checkbox_wrapper::after {
+        top: 59%;
+        left: 56%;
+        width: 8px;
+        height: 8px;
+    }
+    #remember span {
+        font-size: 0.8rem;
+        margin-left: 12px;
+        transform: scale(.9);
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .signin_card_wrapper {
+        height: 600px;
+        padding: 2rem 0;
+    }
+    .signin_card_form {
+        padding-left: 4rem;
+        margin-top: 2.5rem;
+    }
+    .signin_card_form_signup {
+        margin-top: 1.5rem;
+    }
+    #acount input {
+        height: 2.6rem;
+        font-size: 1.1rem;
+        padding: 0 1.5rem 0 3rem;
+        margin-top: 2.5rem;
+    }
+    #acount::before {
+        bottom: 12px;
+        left: 16px;
+        width: 18px;
+        height: 18px;    
+    }
+    #password input {
+        height: 2.6rem;
+        font-size: 1.1rem;
+        padding: 0 1.5rem 0 3rem;
+        margin-top: 2.5rem;
+    }
+    #password::before {
+        bottom: 12px;
+        left: 16px;
+        width: 18px;
+        height: 18px;            
+    }
+    #remember {
+        margin-top: 2.5rem;    
+    }
+    #remember input[type=checkbox] {
+        width: 18px;
+        height: 18px;
+    }
+    .icon_checkbox_wrapper {
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+    }
+    .icon_checkbox_wrapper::after {
+        top: 65%;
+        left: 50%;
+        width: 12px;
+        height: 12px;
+    }
+    #remember span {
+        font-size: 0.8rem;
+        margin-left: 12px;
+    }
+}
+/* bottom_nav */
+.bottom_nav_wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.bottom_nav_list_wrapper {
+    display: flex;
+}
+.bottom_nav_list {
+    position: relative;
+    width: calc(100% / 4);
+    height: 3rem;
+    display: flex;
+    background-color: var(--black);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.bottom_nav_list:hover:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--font-color);
+    opacity: .4;
+    transition: all 0.2s linear;
+}
+.bottom_nav_list_link {
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.bottom_nav_icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+#bottom_back .bottom_nav_icon {
+    width: 24px;
+}
+#bottom_menu .bottom_nav_icon {
+    width: 16px;
+    height: 16px;
+}
+#bottom_contact .bottom_nav_icon {
+    height: 18px;
+}
+.bottom_nav_txt {
+    color: var(--font-color);
+    font-size: 1.1rem;
+    margin-top: 5px;
+    font-weight: 300;
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .bottom_nav_list {
+        height: 2rem;
+    }
+    .bottom_nav_icon {
+        width: 14px;
+        height: 16px;
+    }
+    #bottom_back .bottom_nav_icon {
+        width: 18px;
+        height: 16px;
+    }
+    #bottom_menu .bottom_nav_icon {
+        width: 12px;
+        height: 13px;
+    }
+    #bottom_contact .bottom_nav_icon {
+        height: 13px;
+    }
+    .bottom_nav_txt {
+        font-size: 12px;
+        margin-top: 0px;    
+    }
+    .bottom_nav_list:hover:after {
+        height: 2rem;
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .bottom_nav_list {
+        height: 3rem;
+    }
+    .bottom_nav_icon {
+        width: 20px;
+        height: 20px;
+    }
+    #bottom_back .bottom_nav_icon {
+        width: 24px;
+        height: 20px;
+    }
+    #bottom_menu .bottom_nav_icon {
+        width: 16px;
+        height: 16px;
+    }
+    #bottom_contact .bottom_nav_icon {
+        height: 18px;
+    }
+    .bottom_nav_txt {
+        font-size: 1.1rem;
+        margin-top: 5px;    
+    }
+    .bottom_nav_list:hover:after {
+        height: 3rem;
+    }
+}
+/* signup.html */
+.signup_card_wrapper {
+    position: absolute;
+    top: 5%; 
+    left: 50%;
+    transform: translate(-50%,0);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+    padding: 2rem 0 3.5rem ;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.signup_card_wrapper_bg {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    opacity: .95;
+}
+.signup_card_logo_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+.signup_card_logo {
+    width: 85%;
+}
+.signup_card_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 4rem;
+    margin-top: 1.5rem;
+}
+.signup_card_form_signin {
+    width: 83%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 1rem;
+}
+.signup_card_form_signin_txt {
+    font-size: 0.8rem;
+}
+.signup_card_form_signin a {
+    position: relative;
+    color: var(--font-color);
+    font-size: 0.8rem;
+}
+.signup_card_form_signin a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 120%;
+    height: 150%;
+    background-color: var(--font-color);
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.signup_card_form_signin a:hover::after {
+    opacity: .2;
+    transition: all 0.2s linear;
+}
+.signup_card_form_signin a:active::after {
+    opacity: .4;
+    transition: all 0.2s linear;
+}
+.signup_card_form #acount input {
+    margin-top: 0;
+}
+.signup_card_form #password input {
+    margin-top:  1.5rem;
+}
+.signup_card_form #submit {
+    margin-top: 1rem;
+}
+#confirm_password {
+    position: relative;
+    width: 83%;
+}
+#confirm_password input {
+    width: 100%;
+    height: 2.6rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+    color: var(--font-color);
+    padding: 0 1.5rem 0 3rem;
+    margin-top: 1.5rem;
+    border: none;
+}
+#confirm_password::before {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 16px;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icon/icon_password.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#tel {
+    position: relative;
+    width: 83%;
+}
+#tel input {
+    width: 100%;
+    height: 2.6rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+    color: var(--font-color);
+    padding: 0 1.5rem 0 3rem;
+    margin-top: 1.5rem;
+    border: none;
+}
+#tel::before {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 16px;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icon/icon_phone.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#recommender {
+    position: relative;
+    width: 83%;
+}
+#recommender input {
+    width: 100%;
+    height: 2.6rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+    color: var(--font-color);
+    padding: 0 1.5rem 0 3rem;
+    margin-top: 1.5rem;
+    border: none;
+}
+#recommender::before {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 16px;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icon/icon_recommender.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#code {
+    position: relative;
+    width: 83%;
+}
+#code input {
+    width: 100%;
+    height: 2.6rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+    color: var(--font-color);
+    padding: 0 1.5rem 0 3rem;
+    margin-top: 1.5rem;
+    border: none;
+}
+#code::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    left: 16px;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icon/icon_code.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.input-code {
+    width: 200px;
+    height: 32px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+#canvas {
+    float: right;
+    margin-top: 5px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
+  /* RWD手機 */
+@media (max-width:549px){ 
+    .signup_card_wrapper {
+        height: 550px;
+        padding: 1.5rem 0;
+    }
+    .signup_card_form {
+        padding-left: 3rem;
+        margin-top: 1rem;
+    }
+    .signup_card_form #password input {
+        margin-top: 1rem;
+    }
+    #confirm_password input {
+        height: 2.1rem;
+        font-size: 0.8rem;
+        padding: 0 1.5rem 0 2.5rem;
+        margin-top: 1rem;
+    }
+    #confirm_password::before {
+        bottom: 10px;
+        left: 14px;
+        width: 16px;
+        height: 16px;
+    }
+    #tel input {
+        height: 2.1rem;
+        font-size: 0.8rem;
+        padding: 0 1.5rem 0 2.5rem;
+        margin-top: 1rem;
+    }
+    #tel::before {
+        bottom: 10px;
+        left: 14px;
+        width: 16px;
+        height: 16px;
+    }
+    #recommender input {
+        height: 2.1rem;
+        font-size: 0.8rem;
+        padding: 0 1.5rem 0 2.5rem;
+        margin-top: 1rem;
+    }
+    #recommender::before {
+        bottom: 10px;
+        left: 14px;
+        width: 16px;
+        height: 16px;
+    }
+    #code input {
+        height: 2.1rem;
+        font-size: 0.8rem;
+        padding: 0 1.5rem 0 2.5rem;
+        margin-top: 1rem;
+    }
+    #code::before {
+        top: 25px;
+        left: 14px;
+        width: 16px;
+        height: 16px;
+    }
+    #submit {
+        margin-top: 1.5rem;    
+    }
+    #submit input {
+        width: 150px;
+        height: 2.2rem;
+        font-size: 1.1rem;
+    }
+    .signup_card_form_signin {
+        margin-top: 0.5rem;
+    }
+    .signup_card_form_signin a{
+        transform: scale(0.8);
+    }
+    .signup_card_form_signin_txt {
+        font-size: 0.8rem;
+        transform: scale(.8);
+    }
+}
+/* RWD大型裝置 */
+@media (min-width:550px){ 
+    .signup_card_wrapper {
+        height: 80%;
+        padding: 2rem 0 3.5rem;
+    }
+    .signup_card_form {
+        padding-left: 4rem;
+        margin-top: 2.5rem;
+    }
+    #confirm_password input {
+        height: 2.6rem;
+        font-size: 1.1rem;
+        padding: 0 1.5rem 0 3rem;
+        margin-top: 1.5rem;
+    }
+    .signup_card_form #password input {
+        margin-top:  1.5rem;
+    }
+    #confirm_password::before {
+        bottom: 12px;
+        left: 16px;
+        width: 18px;
+        height: 18px;    
+    }
+    #tel input {
+        height: 2.6rem;
+        font-size: 1.1rem;
+        padding: 0 1.5rem 0 3rem;
+        margin-top: 1.5rem;
+    }
+    #tel::before {
+        bottom: 12px;
+        left: 16px;
+        width: 18px;
+        height: 18px;    
+    }
+    #recommender input {
+        height: 2.6rem;
+        font-size: 1.1rem;
+        padding: 0 1.5rem 0 3rem;
+        margin-top: 1.5rem;
+    }
+    #recommender::before {
+        bottom: 12px;
+        left: 16px;
+        width: 18px;
+        height: 18px;    
+    }
+    #code input {
+        height: 2.6rem;
+        font-size: 1.1rem;
+        padding: 0 1.5rem 0 3rem;
+        margin-top: 1.5rem;
+    }
+    #code::before {
+        top: 34px;
+        left: 16px;
+        width: 18px;
+        height: 18px;    
+    }
+    #submit {
+        margin-top: 2rem;    
+    }
+    #submit input {
+        width: 250px;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+    .signup_card_form_signin_txt {
+        font-size: 0.8rem;
+    }
+    .signup_card_form_signin {
+        margin-top: 1.5rem;
+    }
+}
+/* mode */
+.hide {
+    display: none;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.is-load {
+    opacity: 1;
+    transition: all 0.5s;
+}
+.active {
+    display: block;
+    transition: all 0.5s;
+}
