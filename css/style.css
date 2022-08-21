@@ -1312,7 +1312,7 @@ section {
 }
 .ham-menu_btn_sign_out_link {
     position: absolute;
-    top: 50%;
+    bottom: 3rem;
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -1423,11 +1423,6 @@ section {
     }
     .ham-menu_btn_sign_out_link  {
         bottom: 2rem;
-    }
-}
-@media (min-width:413px){
-    .ham-menu_btn_sign_out_link  {
-        bottom: 8rem;
     }
 }
 /* RWD大型裝置 */
