@@ -1,4 +1,15 @@
 $(function () {
+/* hover */
+/*     $('#point input').hover(function () {
+        // over
+        document.getElementById('to-money_svg').style.opacity ="1";
+        document.getElementById('to-emoney_svg').style.opacity ="1";
+    }, function () {
+        // out
+        document.getElementById('to-money_svg').style.opacity =".5";  
+        document.getElementById('to-emoney_svg').style.opacity =".5";  
+    }
+    ); */
 /* click */
     /* ham-menu */
     $('.ham-menu_mask').on("click",function(){
@@ -149,9 +160,30 @@ $(function () {
         zIndex:99999,
         lazyLoad:'progressive',
     });
-});
-/* copy 複製功能 */
 
+});
+/* input禁用和啟動 */
+function inputdisable(){
+    if(document.getElementById("point_number").value >= "1") { 
+        document.getElementById("to-money_submit").disabled = false;
+        document.getElementById("to-emoney_submit").disabled = false;
+        } else { 
+            document.getElementById("to-money_submit").disabled = "disable";
+            document.getElementById("to-emoney_submit").disabled = "disable";
+        };
+        /* ICON 禁用啟昱透明度顏色變化 */
+    if (document.getElementById('to-emoney_submit').disabled == true) {
+        document.getElementById('to-emoney_svg').style.opacity =".5";
+        } else {
+            document.getElementById('to-emoney_svg').style.opacity ="1";
+        };
+    if (document.getElementById('to-money_submit').disabled == true) {
+        document.getElementById('to-money_svg').style.opacity =".5";
+        } else {
+            document.getElementById('to-money_svg').style.opacity ="1";
+        };
+};
+/* copy 複製功能 */
 function copyfn(id){
     var val = document.getElementById(id);
     window.getSelection().selectAllChildren(val);

@@ -290,8 +290,8 @@ section {
 .game_card_wrapper.show {
     z-index: 20;
     position: absolute;
-    top: 287px;
-    left: 47.5px;
+    top: 284px;
+    left: 43.5px;
     opacity: 1;
     width: unset;
     height: unset;
@@ -374,8 +374,8 @@ section {
 /* RWD大型裝置 */
 @media (min-width:550px){ 
     .game_card_wrapper.show {
-        top: 287px;
-        left: 47.5px;
+        top: 284px;
+        left: 43.5px;
     }
     .game_card.show {
         width: 460px;
@@ -402,8 +402,8 @@ section {
 .news_card_wrapper.show {
     z-index: 20;
     position: absolute;
-    top: 287px;
-    left: 47.5px;
+    top: 284px;
+    left: 43.5px;
     opacity: 1;
     width: unset;
     height: unset;
@@ -471,8 +471,8 @@ section {
 /* RWD大型裝置 */
 @media (min-width:550px){ 
     .news_card_wrapper.show {
-        top: 287px;
-        left: 47.5px;
+        top: 284px;
+        left: 43.5px;
     }
     .news_card.show {
         width: 460px;
@@ -583,8 +583,8 @@ section {
 .member_card_wrapper.show {
     z-index: 25;
     position: absolute;
-    top: 287px;
-    left: 47.5px;
+    top: 284px;
+    left: 43.5px;
     opacity: 1;
     width: unset;
     height: unset;
@@ -640,8 +640,8 @@ section {
 /* RWD大型裝置 */
 @media (min-width:550px){ 
     .member_card_wrapper.show {
-        top: 287px;
-        left: 47.5px;
+        top: 284px;
+        left: 43.5px;
     }
     .member_card.show {
         width: 460px;
@@ -2001,6 +2001,171 @@ section {
         box-shadow: 0px 0px 15px 18px var(--font-color);
     }
 }
+/* transition.html */
+.main_transition {
+    position: absolute;
+    top: 284px;
+    left: 43.5px;
+    width: 460px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--blue);
+}
+.main_transition_content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2rem;
+}
+.main_transition_content_point {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+.main_transition_content_money,.main_transition_content_emoney {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 4 * 1);
+}
+.main_transition_content_money_title {
+    color: var(--yellow);
+    font-size: 1rem;
+    font-weight: 300;
+}
+.main_transition_content_money_txt {
+    margin-top: .3rem;
+    color: var(--font-color);
+    font-size: 1.5rem;
+}
+.main_transition_content_form {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 4 * 2);
+}
+.main_transition_content_form_title {
+    position: absolute;
+    top: -1.2rem;
+    left: 25%;
+    opacity: .7;
+    font-size: .9rem;
+    transition: all .3s ease;
+}
+#to-money input , #to-emoney input {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    opacity: 0;
+}
+#to-money input:hover , #to-emoney input:hover {
+    cursor: pointer;
+}
+#to-money , #to-emoney {
+    position: relative;
+}
+.to-money_btn_left , .to-emoney_btn_right{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+.to-money_btn_left svg , .to-emoney_btn_right svg {
+    width: 32px;
+    height: 100%;
+    fill: var(--font-color);
+    opacity: .5;
+    transition: all 0.3s ease;
+}
+#point input {
+    margin:  0 1rem;
+    padding-left: .5rem;
+    width: 120px;
+    height: 2rem;
+    font-size: 1rem;
+    color: var(--font-color);
+    background: unset;
+    border: unset;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all .3s ease;
+}
+#point input:hover {
+    border-bottom: 1px solid var(--font-color);
+}
+#point input:hover + .main_transition_content_form_title {
+    opacity: 1;
+}
+#point input:focus + .main_transition_content_form_title {
+    opacity: 1;
+}
+.main_transition_content_img_wrapper {
+    width: 200px;
+    height: 200px;
+    margin-top: 2rem;
+}
+.main_transition_content_img_wrapper img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.main_transition_content_link {
+    margin-top: .5rem;
+}
+.main_transition_content_link_btn {
+    display: flex;
+    width: 120px;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange);
+    border-radius: 8px;
+}
+.main_transition_content_link_btn_txt {
+    color: var(--font-color);
+    font-size: 1rem;
+}
+/* RWD手機 */
+@media (max-width:549px){ 
+    .main_transition {
+        width: 310px;
+        height: 310px;
+        top: 195px;
+        left: 32.5px;
+    }
+    .main_transition_content {
+        padding-top: 1.5rem;
+    }
+    .main_transition_content_money_title {
+        font-size: .9rem;
+    }
+    .main_transition_content_money_txt {
+        font-size: 1.3rem;
+    }
+    #point input {
+        width: 70px;
+        margin: 0 .5rem;
+    }
+    .main_transition_content_form_title {
+        left: 28%;
+    }
+    .main_transition_content_img_wrapper {
+        width: 120px;
+        height: 120px;
+        margin-top: .5rem;
+    }
+    .main_transition_content_link_btn {
+        width: 100px;
+    }
+}
 /* signin.html */
 .signin_card_wrapper {
     position: absolute;
@@ -2174,6 +2339,9 @@ section {
     border-radius: 10px;
     font-size: 1.5rem;
     color: var(--font-color);
+}
+#submit input:hover {
+    cursor: pointer;
 }
 .signin_card_form_signup {
     width: 83%;

@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>海鑫娛樂</title>
+    <!-- CSS slick 輪播圖 -->
+    <link rel="stylesheet" href="./css/slick.css"/>
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <!-- 自訂意CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="signout_card_wrapper"><!-- 登出確認視窗 -->
+        <div class="signout_card_wrapper_bg"></div><!-- 背景色 -->
+        <div class="signout_card"><!-- 內容 -->
+            <p class="signout_card_txt">确定登出?</p>
+            <div class="signout_card_btn_wrapper">
+                <div class="signout_card_btn_no"><p>取消</p></div>
+                <a href="./signin.html">
+                    <div class="signout_card_btn_yes"><p>确定</p></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="contact_card_wrapper"><!-- 客服視窗 -->
+        <div class="contact_card"><!-- 內容 -->
+            <div class="contact_card_btn_close" id="contact_card_btn_close" ><!-- 關閉按鈕 -->
+                <img src="./img/icon/icon_close.png" alt="icon_close">
+            </div>
+            <figure class="contact_card_img"><!-- 內容 -->
+                <img src="./img/img_contact_qrcode.png" alt="img_contact_qrcode"><!-- QRCODE -->
+                <figcaption class="contact_card_img_sub">客服QRCODE</figcaption><!-- 文字 -->
+            </figure>
+        </div>
+    </div>
+    <header class="ham-menu " id="ham-menu"><!-- ham menu 選單-->
+        <div class="ham-menu_mask"></div><!-- 底部灰色 -->
+        <div class="ham-menu_aside"><!-- 左側內容視窗 -->
+            <div class="ham-menu_aside_content">
+                <div class="ham-menu_aside_bg"></div><!-- 背景色 -->
+                <div class="ham-menu_logo_wrapper"><!-- LOGO -->
+                    <h1 class="ham-menu_logo">
+                        <img src="./img/img_logo.png" alt="img_logo">
+                    </h1>
+                </div>
+                <div class="ham-menu_member"><!-- 會員資料 -->
+                    <div class="ham-menu_member_left"><!-- 左側 -->
+                        <figure class="ham-menu_member_level"><!-- LEVEL -->
+                            <img src="./img/icon/icon_level_01.png" alt="icon_level_01"><!-- 排位圖 -->
+                            <figcaption class="ham-menu_member_level_txt">白銀</figcaption><!-- 文字 -->
+                        </figure>
+                    </div>
+                    <div class="ham-menu_member_right"><!-- 右邊 -->
+                        <div class="ham-menu_member_name_wrapper"><!-- 會員名字 -->
+                            <h2 class="ham-menu_member_name">WIN666</h2>
+                        </div>
+                        <a href="" class="ham-menu_member_money_wrapper_link"><!-- 連結儲值頁 (暫無網址) -->
+                            <div class="ham-menu_member_money_wrapper">
+                                <figure class="ham-menu_member_money_icon_money"><!-- 錢幣圖 -->
+                                    <img src="./img/icon/icon_money.png" alt="icon_money">
+                                </figure>
+                                <p class="ham-menu_member_money_txt">1,688,168</p><!-- 金額數值 -->
+                                <figure class="ham-menu_member_money_icon_plus"><!-- + 符號圖 -->
+                                    <img src="./img/icon/icon_plus.png" alt="icon_plus">
+                                </figure>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="ham-menu_game_content">
+                    <div class="ham-menu_1"><!-- 第一項目 -->
+                        <div class="ham-menu_1_title_wrapper"><!-- 標題名稱 -->
+                            <h2 class="ham-menu_1_title">游戏中机台</h2><!-- 標題 -->
+                            <figure class="ham-menu_1_btn_arrow_down"><!-- 按鈕 -->
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 59.414 59.414" style="enable-background:new 0 0 59.414 59.414;" xml:space="preserve">
+                                    <g>
+                                        <polygon style="" points="29.707,45.268 0,15.561 1.414,14.146 29.707,42.439 58,14.146 59.414,15.561 	"/>
+                                    </g>
+                                </svg>
+                            </figure>
+                        </div>
+                        <div class="ham-menu_1_child"><!-- 第1子項目 -->
+                            <a href="./transition.html" class="ham-menu_1_child_link"><!-- 子項目1 -->
+                                <figure class="ham-menu_1_child_img_game"><!-- 遊戲圖 -->
+                                    <img src="./img/game/img_game_1.png" alt="img_game_1">
+                                </figure>
+                                <div class="ham-menu_1_child_title_wrapper"><!-- 遊戲名 -->
+                                    <h2 class="ham-menu_1_child_title">7pk</h2>
+                                </div>
+                            </a>
+                            <a href="./transition.html" class="ham-menu_1_child_link"><!-- 子項目2 -->
+                                <figure class="ham-menu_1_child_img_game"><!-- 遊戲圖 -->
+                                    <img src="./img/game/img_game_5.png" alt="img_game_5">
+                                </figure>
+                                <div class="ham-menu_1_child_title_wrapper"><!-- 遊戲名 -->
+                                    <h2 class="ham-menu_1_child_title">15轮</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ham-menu_2"><!-- 第二項目 -->
+                        <div class="ham-menu_1_title_wrapper"><!-- 標題名稱 -->
+                            <h2 class="ham-menu_1_title">保留机台</h2><!-- 標題 -->
+                            <figure class="ham-menu_1_btn_arrow_down"><!-- 按鈕 -->
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 59.414 59.414" style="enable-background:new 0 0 59.414 59.414;" xml:space="preserve">
+                                    <g>
+                                        <polygon style="" points="29.707,45.268 0,15.561 1.414,14.146 29.707,42.439 58,14.146 59.414,15.561 	"/>
+                                    </g>
+                                </svg>
+                            </figure>
+                        </div>
+                        <div class="ham-menu_2_child"><!-- 第2子項目 -->
+                            <a href="./transition.html" class="ham-menu_1_child_link"><!-- 子項目1 -->
+                                <figure class="ham-menu_1_child_img_game"><!-- 遊戲圖 -->
+                                    <img src="./img/game/img_game_2.png" alt="img_game_2">
+                                </figure>
+                                <div class="ham-menu_1_child_title_wrapper"><!-- 遊戲名 -->
+                                    <h2 class="ham-menu_1_child_title">小玛莉</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ham-menu_3"><!-- 第三項目 -->
+                        <div class="ham-menu_1_title_wrapper"><!-- 標題名稱 -->
+                            <h2 class="ham-menu_1_title">收藏机台</h2>
+                            <figure class="ham-menu_1_btn_arrow_down"><!-- 按鈕 -->
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 59.414 59.414" style="enable-background:new 0 0 59.414 59.414;" xml:space="preserve">
+                                    <g>
+                                        <polygon style="" points="29.707,45.268 0,15.561 1.414,14.146 29.707,42.439 58,14.146 59.414,15.561 	"/>
+                                    </g>
+                                </svg>
+                            </figure>
+                        </div>
+                        <div class="ham-menu_3_child"><!--第3 子項目 -->
+                            <a href="javascript:void()" class="ham-menu_1_child_link nothing"><!-- 內容為無 -->
+                                <figure class="ham-menu_1_child_img_game"><!-- 空白無圖 -->
+                                    <img src="">
+                                </figure>
+                                <div class="ham-menu_1_child_title_wrapper"><!-- 內容為無 -->
+                                    <h2 class="ham-menu_1_child_title">无</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>    
+                <div  class="ham-menu_btn_sign_out_link"><!-- 登出按鈕 -->
+                    <div class="ham-menu_btn_sign_out_wrapper">
+                        <h1 class="ham-menu_btn_sign_out">登出</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main"><!-- 整體頁面-->
+        <section class="main_contain"><!-- 中間內容 -->
+            <div class="news_card_wrapper"><!-- 最新活動視窗 -->
+                <div class="news_card">
+                    <div class="news_card_title_wrapper"><!-- 標題 -->
+                        <h2 class="news_card_title">最新活动</h2>
+                    </div>
+                    <div class="news_card_content">
+                        <div class="news_card_item" id="news_card_item_1"><!-- 項目1 id數字按照順序 如項目超過 須於JS添加-->
+                            <div class="news_card_item_title_wrapper">
+                                <h2 class="news_card_item_title">开幕活动储值满10000送1000...
+                                </h2><!-- 標題 -->
+                                <figure class="news_card_item_btn_arrow_down"><!-- 按鈕 -->
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 59.414 59.414" style="enable-background:new 0 0 59.414 59.414;" xml:space="preserve">
+                                        <g>
+                                            <polygon style="" points="29.707,45.268 0,15.561 1.414,14.146 29.707,42.439 58,14.146 59.414,15.561 	"/>
+                                        </g>
+                                    </svg>
+                                </figure>
+                            </div>
+                            <div class="news_card_item_1_child" id="news_card_item_1_child"><!-- 隱藏內容 id數字按照順序 如項目超過 須於JS添加-->
+                                <div class="news_card_item_1_child_title_wrapper"><!-- 內容 -->
+                                    <p class="news_card_item_1_child_title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut ipsam animi, aspernatur quia voluptate deleniti assumenda dolor veniam expedita dolorum totam blanditiis eligendi tempora mollitia dicta repudiandae minima ullam saepe sit quae ratione. Deserunt repellendus voluptatem blanditiis hic. Tempora asperiores sequi impedit explicabo sunt assumenda labore quibusdam provident distinctio dolore!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news_card_item" id="news_card_item_2"><!-- 項目2 id數字按照順序  如項目超過 須於JS添加-->
+                            <div class="news_card_item_title_wrapper">
+                                <h2 class="news_card_item_title">推廣拿獎勵...
+                                </h2><!-- 標題 -->
+                                <figure class="news_card_item_btn_arrow_down"><!-- 按鈕 -->
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 59.414 59.414" style="enable-background:new 0 0 59.414 59.414;" xml:space="preserve">
+                                        <g>
+                                            <polygon style="" points="29.707,45.268 0,15.561 1.414,14.146 29.707,42.439 58,14.146 59.414,15.561 	"/>
+                                        </g>
+                                    </svg>
+                                </figure>
+                            </div>
+                            <div class="news_card_item_1_child" id="news_card_item_2_child"><!-- 隱藏內容 id數字按照順序   如項目超過 須於JS添加-->
+                                <div class="news_card_item_1_child_title_wrapper"><!-- 此處不用改 -->
+                                    <p class="news_card_item_1_child_title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut ipsam animi, aspernatur quia voluptate deleniti assumenda dolor veniam expedita dolorum totam blanditiis eligendi tempora mollitia dicta repudiandae minima ullam saepe sit quae ratione. Deserunt repellendus voluptatem blanditiis hic. Tempora asperiores sequi impedit explicabo sunt assumenda labore quibusdam provident distinctio dolore!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news_card_item" id="news_card_item_3"><!-- 項目3 id數字按照順序  如項目超過 須於JS添加-->
+                            <div class="news_card_item_title_wrapper">
+                                <h2 class="news_card_item_title">开幕活动储值满10000送1000...
+                                </h2><!-- 標題 -->
+                                <figure class="news_card_item_btn_arrow_down"><!-- 按鈕 -->
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 59.414 59.414" style="enable-background:new 0 0 59.414 59.414;" xml:space="preserve">
+                                        <g>
+                                            <polygon style="" points="29.707,45.268 0,15.561 1.414,14.146 29.707,42.439 58,14.146 59.414,15.561 	"/>
+                                        </g>
+                                    </svg>
+                                </figure>
+                            </div>
+                            <div class="news_card_item_1_child" id="news_card_item_3_child"><!-- 隱藏內容 id數字按照順序  如項目超過 須於JS添加-->
+                                <div class="news_card_item_1_child_title_wrapper"><!-- 此處不用改 -->
+                                    <p class="news_card_item_1_child_title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut ipsam animi, aspernatur quia voluptate deleniti assumenda dolor veniam expedita dolorum totam blanditiis eligendi tempora mollitia dicta repudiandae minima ullam saepe sit quae ratione. Deserunt repellendus voluptatem blanditiis hic. Tempora asperiores sequi impedit explicabo sunt assumenda labore quibusdam provident distinctio dolore!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="bottom_nav_wrapper"><!-- 底部按鈕 -->
+                        <ul class="bottom_nav_list_wrapper">
+                            <li class="bottom_nav_list" id="bottom_back"><!-- 第一按鈕 -->
+                                <a href="javascript:void()" class="bottom_nav_list_link" id="news_bottom_back">
+                                    <div class="bottom_nav_icon"><!-- ICON圖 -->
+                                        <img src="./img/icon/icon_back.png" alt="icon_back">
+                                    </div>
+                                    <h2 class="bottom_nav_txt">返回</h2>
+                                </a>
+                            </li>
+                            <li class="bottom_nav_list" id="bottom_member"><!-- 第二按鈕 -->
+                                <a href="javascript:void()" class="bottom_nav_list_link" id="news_bottom_member">
+                                    <div class="bottom_nav_icon">
+                                        <img src="./img/icon/icon_member.png" alt="icon_member">
+                                    </div>
+                                    <h2 class="bottom_nav_txt">会员</h2>
+                                </a>
+                            </li>
+                            <li class="bottom_nav_list" id="bottom_menu"><!-- 第三按鈕 -->
+                                <a href="javascript:void()" class="bottom_nav_list_link" id="news_bottom_menu">
+                                    <div class="bottom_nav_icon">
+                                        <img src="./img/icon/icon_menu.png" alt="icon_menu">
+                                    </div>
+                                    <h2 class="bottom_nav_txt">选单</h2>
+                                </a>
+                            </li>
+                            <li class="bottom_nav_list" id="bottom_contact"><!-- 第四按鈕 -->
+                                <a href="javascrip:void()" class="bottom_nav_list_link">
+                                    <div class="bottom_nav_icon">
+                                        <img src="./img/icon/icon_contact.png" alt="icon_contact">
+                                    </div>
+                                    <h2 class="bottom_nav_txt">客服</h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="game_card_wrapper"><!-- 遊戲視窗 -->
+                <div class="game_card">
+                    <div class="game_card_title_wrapper"><!-- 標題 -->
+                        <h2 class="game_card_title">游戏选择</h2>
+                    </div>
+                    <div class="game_card_content"><!-- 內容 -->
+                        <ul class="game_card_content_list_wrapper"><!-- 由上至下 由左至右 排序-->
+                            <li class="game_card_content_list"><!-- 第一個遊戲 依此類推-->
+                                <a href=""><!-- 暫無連結網址 -->
+                                <img src="./img/game/img_game_1.png" alt="img_game_1">
+                                </a>
+                            </li>
+                            <li class="game_card_content_list">
+                                <a href="">
+                                <img src="./img/game/img_game_7.png" alt="img_game_7">
+                                </a>
+                            </li>
+                            <li class="game_card_content_list">
+                                <a href="">
+                                <img src="./img/game/img_game_6.png" alt="img_game_6">
+                                </a>
+                            </li>
+                            <li class="game_card_content_list">
+                                <a href="">
+                                <img src="./img/game/img_game_1.png" alt="img_game_1">
+                                </a>
+                            </li>
+                            <li class="game_card_content_list">
+                                <a href="">
+                                <img src="./img/game/img_game_4.png" alt="img_game_4">
+                                </a>
+                            </li>
+                            <li class="game_card_content_list">
+                                <a href="">
+                                <img src="./img/game/img_game_9.png" alt="img_game_9">
+                                </a>
+                            </li>
+                            <li class="game_card_content_list">
+                                <a href="">
+                                <img src="./img/game/img_game_8.png" alt="img_game_8">
+                                </a>
+                            </li>
+                            <li class="game_card_content_list">
+                                <a href="">
+                                <img src="./img/game/img_game_4.png" alt="img_game_4">
+                                </a>
+                            </li>
+                            <li class="game_card_content_list">
+                                <a href="">
+                                <img src="./img/game/img_game_3.png" alt="img_game_3">
+                                </a>
+                            </li>
+                            <li class="game_card_content_list">
+                                <a href="">
+                                <img src="./img/game/img_game_5.png" alt="img_game_5">
+                                </a>
+                            </li>
+                            <li class="game_card_content_list">
+                                <a href="">
+                                <img src="./img/game/img_game_2.png" alt="img_game_2">
+                                </a>
+                            </li>
+                            <li class="game_card_content_list">
+                                <a href="">
+                                <img src="./img/game/img_game_3.png" alt="img_game_3">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <nav class="bottom_nav_wrapper"><!-- 底部按鈕 -->
+                        <ul class="bottom_nav_list_wrapper">
+                            <li class="bottom_nav_list" id="bottom_back">
+                                <a href="javascript:void()" class="bottom_nav_list_link" id="game_bottom_back">
+                                    <div class="bottom_nav_icon">
+                                        <img src="./img/icon/icon_back.png" alt="icon_back">
+                                    </div>
+                                    <h2 class="bottom_nav_txt">返回</h2>
+                                </a>
+                            </li>
+                            <li class="bottom_nav_list" id="bottom_member">
+                                <a href="javascript:void()" class="bottom_nav_list_link" id="game_bottom_member">
+                                    <div class="bottom_nav_icon">
+                                        <img src="./img/icon/icon_member.png" alt="icon_member">
+                                    </div>
+                                    <h2 class="bottom_nav_txt">会员</h2>
+                                </a>
+                            </li>
+                            <li class="bottom_nav_list" id="bottom_menu">
+                                <a href="javascript:void()" class="bottom_nav_list_link" id="game_bottom_menu">
+                                    <div class="bottom_nav_icon">
+                                        <img src="./img/icon/icon_menu.png" alt="icon_menu">
+                                    </div>
+                                    <h2 class="bottom_nav_txt">选单</h2>
+                                </a>
+                            </li>
+                            <li class="bottom_nav_list" id="bottom_contact">
+                                <a href="javascrip:void()" class="bottom_nav_list_link">
+                                    <div class="bottom_nav_icon">
+                                        <img src="./img/icon/icon_contact.png" alt="icon_contact">
+                                    </div>
+                                    <h2 class="bottom_nav_txt">客服</h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="member_card_wrapper"><!-- 會員中心 -->
+                <div class="member_card">
+                    <div class="member_card_title_wrapper"><!-- 標題 -->
+                        <h2 class="member_card_title" id="member_card_title">会员中心</h2>
+                    </div>
+                    <nav class="member_card_nav_wrapper"><!-- 切換導覽列 -->
+                        <ul class="member_card_nav_list_wrapper">
+                            <li class="member_card_nav_list" id="member_card_nav_list_1">
+                                <h2>会员资料</h2>
+                            </li>
+                            <li class="member_card_nav_list" id="member_card_nav_list_2">
+                                <h2>充值提领纪录</h2>
+                            </li>
+                            <li class="member_card_nav_list" id="member_card_nav_list_3">
+                                <h2>游戏纪录</h2>
+                            </li>
+                            <li class="member_card_nav_list" id="member_card_nav_list_4">
+                                <h2>转点纪录</h2>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="member_card_content"><!-- 分頁內容 -->
+                        <ul class="member_card_content_list_wrapper">
+                            <li class="member_card_nav_content_wrapper" id="member_profile"><!-- 會員資料 -->
+                                <div class="member_card_nav_content"><!-- 內容 -->
+                                    <div class="member_profile_top"><!-- 會員資料 -->
+                                        <figure class="member_profile_top_img">
+                                            <img src="./img/icon/icon_level_01.png" alt="icon_level_01">
+                                            <p class="member_profile_top_img_txt">白銀</p>
+                                        </figure>
+                                        <h2 class="member_profile_titile">WIN666</h2>
+                                        <a href="javascript:void()" class="member_profile_top_btn_link"><!-- 修改密碼頁面 暫無連結 -->
+                                            <div class="member_profile_top_btn_wrapper">
+                                                <h1 class="member_profile_top_btn">修改密码</h1>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="member_profile_txt_wrapper"><!-- 第一行 依此類推 -->
+                                        <h2 class="member_profile_title">电话</h2><!-- 標題 -->
+                                        <p class="member_profile_txt">0912345678</p><!-- 內容 -->
+                                    </div>
+                                    <div class="member_profile_txt_wrapper">
+                                        <h2 class="member_profile_title">推荐人</h2>
+                                        <p class="member_profile_txt">WIN666</p>
+                                    </div>
+                                    <div class="member_profile_txt_wrapper">
+                                        <h2 class="member_profile_title">推广网址</h2>
+                                        <p class="member_profile_txt" id="promotion_url">Lorem.ipsum.dolor.sit
+                                        </p>
+                                        <div class="member_profile_txt_btn_copy" onclick="copyfn('promotion_url')">
+                                            <img src="./img/icon/icon_copy.png" alt="icon_copy">
+                                        </div>
+                                    </div>
+                                    <div class="member_profile_txt_wrapper">
+                                        <h2 class="member_profile_title">钱包</h2>
+                                        <p class="member_profile_txt">46點</p>
+                                    </div>
+                                    <div class="member_profile_txt_wrapper">
+                                        <h2 class="member_profile_title">奖励</h2>
+                                        <p class="member_profile_txt">0</p>
+                                    </div>
+                                    <div class="member_profile_txt_wrapper">
+                                        <h2 class="member_profile_title">贡献值</h2>
+                                        <p class="member_profile_txt">0</p>
+                                    </div>
+                                    <div class="member_profile_txt_wrapper">
+                                        <h2 class="member_profile_title">可保留时间</h2>
+                                        <p class="member_profile_txt">0分钟</p>
+                                    </div>
+                                    <div class="member_profile_txt_wrapper">
+                                        <h2 class="member_profile_title">支付帐号</h2>
+                                        <p class="member_profile_txt">0912345678</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="member_card_nav_content_wrapper" id="recharge_history"><!-- 充值提領紀錄 -->
+                                <div class="recordlist_top_wrapper"><!-- 頂部行 -->
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">时间</h3>
+                                    </div>
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">金额</h3>
+                                    </div>
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">比值</h3>
+                                    </div>
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">状态</h3>
+                                    </div>
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">状态</h3>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 內容 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">50000</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">1:3</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt withdrawal">提领</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt success">成功</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 內容-->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">50000</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">1:3</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt add_value">储值</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt processing">处理中</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">50000</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">1:3</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt withdrawal">提领</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt success">成功</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">50000</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">1:3</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt add_value">储值</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt processing">处理中</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">50000</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">1:3</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt withdrawal">提领</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt success">成功</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">50000</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">1:3</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt add_value">储值</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt processing">处理中</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">50000</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">1:3</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt withdrawal">提领</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt success">成功</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">50000</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">1:3</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt add_value">储值</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt processing">处理中</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">50000</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">1:3</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt withdrawal">提领</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt success">成功</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">50000</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">1:3</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt add_value">储值</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt processing">处理中</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">50000</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">1:3</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt withdrawal">提领</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt success">成功</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">50000</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">1:3</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt add_value">储值</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt processing">处理中</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="member_card_nav_content_wrapper" id="game_record"><!-- 遊戲紀錄 -->
+                                <div class="recordlist_top_wrapper"><!-- 頂部行 -->
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">开始时间</h3>
+                                    </div>
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">机台</h3>
+                                    </div>
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">执行分数</h3>
+                                    </div>
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">上分</h3>
+                                    </div>
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">下分</h3>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 內容-->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">C161-1:2</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 內容-->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">C161-1:2</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">C161-1:2</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">C161-1:2</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">C161-1:2</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">C161-1:2</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">C161-1:2</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">C161-1:2</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">C161-1:2</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">C161-1:2</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">C161-1:2</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">C161-1:2</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                            </li><!-- 遊戲紀錄 -->
+                            <li class="member_card_nav_content_wrapper" id="turnover_record"><!-- 轉點紀錄 -->
+                                <div class="recordlist_top_wrapper"><!-- 頂部行 -->
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">开始时间</h3>
+                                    </div>
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">类别</h3>
+                                    </div>
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">转进分数</h3>
+                                    </div>
+                                    <div class="recordlist_title_wrapper">
+                                        <h3 class="recordlist_title">转出分数</h3>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 內容-->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">WM</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 內容-->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">开元棋牌</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">WM</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">开元棋牌</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">WM</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">开元棋牌</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">WM</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">开元棋牌</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">WM</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">开元棋牌</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 奇數黑底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/27/19:58</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">WM</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- withdrawal 提領紅字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- success 成功黃字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                                <div class="recordlist_content_wrapper"><!-- 偶數灰底 -->
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">2022/07/17/11:54</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper">
+                                        <p class="recordlist_content_txt">开元棋牌</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- add_value 儲值綠字 -->
+                                        <p class="recordlist_content_txt txt-red">200</p>
+                                    </div>
+                                    <div class="recordlist_content_txt_wrapper"><!-- processing 處理綠字 -->
+                                        <p class="recordlist_content_txt txt-green">300</p>
+                                    </div>
+                                </div>
+                            </li><!-- 轉點紀錄 -->
+                        </ul>
+                    </div>
+                    <nav class="bottom_nav_wrapper"><!-- 底部按鈕 -->
+                        <ul class="bottom_nav_list_wrapper">
+                            <li class="bottom_nav_list" id="bottom_back">
+                                <a href="javascript:void()" class="bottom_nav_list_link" id="member_bottom_back">
+                                    <div class="bottom_nav_icon">
+                                        <img src="./img/icon/icon_back.png" alt="icon_back">
+                                    </div>
+                                    <h2 class="bottom_nav_txt">返回</h2>
+                                </a>
+                            </li>
+                            <li class="bottom_nav_list" id="bottom_member"><!-- 回至第一頁 -->
+                                <a href="javascript:void()" class="bottom_nav_list_link" id="member_bottom_member">
+                                    <div class="bottom_nav_icon">
+                                        <img src="./img/icon/icon_member.png" alt="icon_member">
+                                    </div>
+                                    <h2 class="bottom_nav_txt">会员</h2>
+                                </a>
+                            </li>
+                            <li class="bottom_nav_list" id="bottom_menu">
+                                <a href="javascript:void()" class="bottom_nav_list_link" id="member_bottom_menu">
+                                    <div class="bottom_nav_icon">
+                                        <img src="./img/icon/icon_menu.png" alt="icon_menu">
+                                    </div>
+                                    <h2 class="bottom_nav_txt">选单</h2>
+                                </a>
+                            </li>
+                            <li class="bottom_nav_list" id="bottom_contact">
+                                <a href="javascrip:void()" class="bottom_nav_list_link">
+                                    <div class="bottom_nav_icon">
+                                        <img src="./img/icon/icon_contact.png" alt="icon_contact">
+                                    </div>
+                                    <h2 class="bottom_nav_txt">客服</h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="main_contain_basic"><!-- 主頁內容 -->
+                <div class="main_contain_basic_bg_wrapper"><!-- 背景 -->
+                    <figure class="main_contain_basic_bg"><!-- 底部背景圖 -->
+                        <img src="./img/bg/bg_home_01.png" alt="bg_home_01">
+                    </figure>
+                    <div class="main_contain_basic_machine_bg_wrapper"><!-- 遊戲機器圖 -->
+                        <figure class="main_contain_basic_machine_bg">
+                            <img src="./img/bg/bg_home_02.png" alt="bg_home_02">
+                        </figure>
+                    </div>
+                </div>
+                <div class="main_contain_announcement_wrapper " id="announcement"><!-- 公告 -->
+                    <figure class="main_contain_announcement_img"><!-- ICON圖 -->
+                        <img src="./img/icon/icon_announcement.png" alt="icon_announcement">
+                    </figure>
+                    <div class="main_contain_announcement_contain_wrapper"><!-- 公告內容 -->
+                        <ul class="main_contain_announcement_contain">
+                            <li class="main_contain_announcement_contain_list"><!-- 首個空白省略 才會由右邊至左顯示-->
+                                <p></p>
+                            </li>
+                            <li class="main_contain_announcement_contain_list"><!-- 第一個公告依序 -->
+                                <p>1公告:这里是公告区</p>
+                            </li>
+                            <li class="main_contain_announcement_contain_list"><!-- 第二個公告 -->
+                                <p>2公告:这里是公告区Lorem ipsum dolor sit.</p>
+                            </li>
+                            <li class="main_contain_announcement_contain_list"><!-- 第三個公告 -->
+                                <p>3公告:这里是公告区Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, cupiditate!</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main_contain_1"><!-- 頂部第一部分 -->
+                    <ul class="main_contain_1_slick01_wrapper"><!-- 輪播圖 -->
+                        <li class="main_contain_1_slick01_list"><!-- 第一頁 依序 -->
+                            <img src="./img/slick/img_slick01_1.png" alt="img_slick01_1">
+                        </li>
+                        <li class="main_contain_1_slick01_list"><!-- 第二頁 -->
+                            <img src="./img/slick/img_slick01_1.png" alt="img_slick01_1">
+                        </li>
+                        <li class="main_contain_1_slick01_list"><!-- 第三頁 -->
+                            <img src="./img/slick/img_slick01_1.png" alt="img_slick01_1">
+                        </li>
+                    </ul>
+                </div>
+                <div class="main_transition"><!-- 中間部分 -->
+                    <div class="main_transition_content"><!-- 內容 -->
+                        <div class="main_transition_content_point"><!-- 第一列 轉點 -->
+                            <div class="main_transition_content_money"><!-- 左邊 錢包餘額 -->
+                                <h2 class="main_transition_content_money_title">钱包馀额</h2><!-- 標題 -->
+                                <p class="main_transition_content_money_txt">0</p><!-- 數字 -->
+                            </div>
+                            <form class="main_transition_content_form" method="get" ><!-- 中間輸入表單 -->
+                                <label for="to-money" id="to-money"><!-- 往左轉入按鈕 -->
+                                    <div class="to-money_btn_left"><!-- ICON 圖示 需直接更換SVG內容 ID不可變動 禁用透明度0.5 啟用為1 -->
+                                        <svg id="to-money_svg" width="0px" height="0px" version="1.1" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="m350 560c-154.64 0-280-125.36-280-280s125.36-280 280-280 280 125.36 280 280-125.36 280-280 280zm0-50.91c126.52 0 229.09-102.57 229.09-229.09s-102.57-229.09-229.09-229.09-229.09 102.57-229.09 229.09 102.57 229.09 229.09 229.09zm18-145.27-36 35.996-119.82-119.82 119.82-119.82 36 35.996-83.82 83.82zm101.82 0-35.996 35.996-119.82-119.82 119.82-119.82 35.996 35.996-83.816 83.82z"/>
+                                        </svg>
+                                    </div> 
+                                    <input type="submit" name="to-money" value="to-money points" id="to-money_submit"onclick="inputdisable()" onkeyup="inputdisable()" disabled="true"  ><!-- 轉入錢包 送出按鈕 -->
+                                </label>
+                                <label for="point" id="point"><!-- 轉點數字輸入 -->
+                                    <input name="point" type="number" value="0" min="0" step="1" id="point_number" onkeyup="inputdisable()" onclick="inputdisable()"><!-- 輸入數字 文字框 -->
+                                    <span class="main_transition_content_form_title">转点</span><!-- 小標題 -->
+                                </label>
+                                <label for="to-emoney" id="to-emoney"><!-- 往右轉入按鈕 -->
+                                    <div class="to-emoney_btn_right"><!-- ICON 圖示 需直接更換SVG內容 ID不可變動 禁用透明度0.5 啟用為1 -->
+                                        <svg id="to-emoney_svg" width="0px" height="0px" version="1.1" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="m350 560c-154.64 0-280-125.36-280-280s125.36-280 280-280 280 125.36 280 280-125.36 280-280 280zm0-50.91c126.52 0 229.09-102.57 229.09-229.09s-102.57-229.09-229.09-229.09-229.09 102.57-229.09 229.09 102.57 229.09 229.09 229.09zm-18-312.91 36-35.996 119.82 119.82-119.82 119.82-36-35.996 83.82-83.82zm-101.82 0 35.996-35.996 119.82 119.82-119.82 119.82-35.996-35.996 83.816-83.82z"/>
+                                        </svg>
+                                    </div>
+                                    <input type="submit" name="to-emoney" value="to-emoney points" id="to-emoney_submit" onclick="inputdisable()" onkeyup="inputdisable()" disabled="true" ><!-- 轉入電子錢包 送出按鈕 -->
+                                </label>
+                            </form>
+                            <div class="main_transition_content_emoney"><!-- 右邊 電子錢包 -->
+                                <h2 class="main_transition_content_money_title">电子钱包</h2><!-- 標題 -->
+                                <p class="main_transition_content_money_txt">0</p><!-- 數字 -->
+                            </div>
+                        </div>
+                        <figure class="main_transition_content_img_wrapper"><!-- 中間遊戲圖 -->
+                            <img src="./img/game/img_game_9.png" alt="img_game_9.png">
+                        </figure>
+                        <a href="" class="main_transition_content_link"><!-- 進入遊戲頁面按鈕 網址暫無-->
+                            <div class="main_transition_content_link_btn">
+                                <p class="main_transition_content_link_btn_txt">进入游戏</p>
+                            </div>
+                        </a>
+                        <nav class="bottom_nav_wrapper"><!-- 底部按鈕 -->
+                            <ul class="bottom_nav_list_wrapper">
+                                <li class="bottom_nav_list" id="bottom_back">
+                                    <a href="./index.html" class="bottom_nav_list_link" id="game_bottom_back">
+                                        <div class="bottom_nav_icon">
+                                            <img src="./img/icon/icon_back.png" alt="icon_back">
+                                        </div>
+                                        <h2 class="bottom_nav_txt">返回</h2>
+                                    </a>
+                                </li>
+                                <li class="bottom_nav_list" id="bottom_member">
+                                    <a href="javascript:void()" class="bottom_nav_list_link" id="game_bottom_member">
+                                        <div class="bottom_nav_icon">
+                                            <img src="./img/icon/icon_member.png" alt="icon_member">
+                                        </div>
+                                        <h2 class="bottom_nav_txt">会员</h2>
+                                    </a>
+                                </li>
+                                <li class="bottom_nav_list" id="bottom_menu">
+                                    <a href="javascript:void()" class="bottom_nav_list_link" id="game_bottom_menu">
+                                        <div class="bottom_nav_icon">
+                                            <img src="./img/icon/icon_menu.png" alt="icon_menu">
+                                        </div>
+                                        <h2 class="bottom_nav_txt">选单</h2>
+                                    </a>
+                                </li>
+                                <li class="bottom_nav_list" id="bottom_contact">
+                                    <a href="javascrip:void()" class="bottom_nav_list_link">
+                                        <div class="bottom_nav_icon">
+                                            <img src="./img/icon/icon_contact.png" alt="icon_contact">
+                                        </div>
+                                        <h2 class="bottom_nav_txt">客服</h2>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- jQuery原生碼 CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- JS slick 輪播圖 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- ionicon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- 自定義JS -->
+    <script src="./js/myjs.js"></script>
+</body>
+</html>
