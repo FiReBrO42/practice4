@@ -126,8 +126,82 @@ $(function () {
         $('.member_card_nav_content_wrapper').css({"transform":"translateX(-300%)"});
         $('#member_card_title').text('转点纪录');    
     });
-
+/* SelectGame */
+    $('.list_1').on("click",function(){
+        $('.list_1').addClass('active');
+        $('.list_2').removeClass('active');
+        $('.list_3').removeClass('active');
+        $('.list_4').removeClass('active');
+        $('.list_5').removeClass('active');
+        $('.list_6').removeClass('active');
+    });
+    $('.list_2').on("click",function(){
+        $('.list_1').removeClass('active');
+        $('.list_2').addClass('active');
+        $('.list_3').removeClass('active');
+        $('.list_4').removeClass('active');
+        $('.list_5').removeClass('active');
+        $('.list_6').removeClass('active');
+    });
+    $('.list_3').on("click",function(){
+        $('.list_1').removeClass('active');
+        $('.list_2').removeClass('active');
+        $('.list_3').addClass('active');
+        $('.list_4').removeClass('active');
+        $('.list_5').removeClass('active');
+        $('.list_6').removeClass('active');
+    });
+    $('.list_4').on("click",function(){
+        $('.list_1').removeClass('active');
+        $('.list_2').removeClass('active');
+        $('.list_3').removeClass('active');
+        $('.list_4').addClass('active');
+        $('.list_5').removeClass('active');
+        $('.list_6').removeClass('active');
+    });
+    $('.list_5').on("click",function(){
+        $('.list_1').removeClass('active');
+        $('.list_2').removeClass('active');
+        $('.list_3').removeClass('active');
+        $('.list_4').removeClass('active');
+        $('.list_5').addClass('active');
+        $('.list_6').removeClass('active');
+    });
+    $('.list_6').on("click",function(){
+        $('.list_1').removeClass('active');
+        $('.list_2').removeClass('active');
+        $('.list_3').removeClass('active');
+        $('.list_4').removeClass('active');
+        $('.list_5').removeClass('active');
+        $('.list_6').addClass('active');
+    });
 /* 輪播圖 */
+    $('.content_top_list_wrapper').slick({
+        slidesToShow: 2, 
+        slidesToScroll: 1,
+        arrows:true,
+        infinite:false,
+        cssEase:'linear',
+        swipe:false,
+        touchMove:false,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                swipe:true,
+                touchMove:true
+              }
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    swipe:true,
+                    touchMove:true,
+                    slidesToShow: 1.5, 
+                }
+            }
+          ]
+    });
     $('.main_contain_1_slick01_wrapper').slick({
         dots: false,
         infinite: true,
