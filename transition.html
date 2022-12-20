@@ -1162,7 +1162,7 @@
                         <div class="main_transition_content_point"><!-- 第一列 轉點 -->
                             <div class="main_transition_content_money"><!-- 左邊 錢包餘額 -->
                                 <h2 class="main_transition_content_money_title">钱包馀额</h2><!-- 標題 -->
-                                <p class="main_transition_content_money_txt">0</p><!-- 數字 -->
+                                <p class="main_transition_content_money_txt moneyWallet">0</p><!-- 數字 -->
                             </div>
                             <form class="main_transition_content_form" method="get" ><!-- 中間輸入表單 -->
                                 <label for="to-money" id="to-money"><!-- 往左轉入按鈕 -->
@@ -1173,10 +1173,12 @@
                                     </div> 
                                     <input type="submit" name="to-money" value="to-money points" id="to-money_submit"onclick="inputdisable()" onkeyup="inputdisable()" disabled="true"  ><!-- 轉入錢包 送出按鈕 -->
                                 </label>
+                                <form >
                                 <label for="point" id="point"><!-- 轉點數字輸入 -->
-                                    <input name="point" type="number" value="0" min="0" step="1" id="point_number" onkeyup="inputdisable()" onclick="inputdisable()"><!-- 輸入數字 文字框 -->
+                                    <input name="point" type="number" min="0" step="1" value="0" id="point_number" onkeyup="inputdisable()" onclick="inputdisable()"><!-- 輸入數字 文字框 -->
                                     <span class="main_transition_content_form_title">转点</span><!-- 小標題 -->
                                 </label>
+                                </form>
                                 <label for="to-emoney" id="to-emoney"><!-- 往右轉入按鈕 -->
                                     <div class="to-emoney_btn_right"><!-- ICON 圖示 需直接更換SVG內容 ID不可變動 禁用透明度0.5 啟用為1 -->
                                         <svg id="to-emoney_svg" width="0px" height="0px" version="1.1" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
@@ -1188,7 +1190,7 @@
                             </form>
                             <div class="main_transition_content_emoney"><!-- 右邊 電子錢包 -->
                                 <h2 class="main_transition_content_money_title">电子钱包</h2><!-- 標題 -->
-                                <p class="main_transition_content_money_txt">0</p><!-- 數字 -->
+                                <p class="main_transition_content_money_txt emoneyWallet">0</p><!-- 數字 -->
                             </div>
                         </div>
                         <figure class="main_transition_content_img_wrapper"><!-- 中間遊戲圖 -->
@@ -1248,6 +1250,8 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!-- 自定義JS -->
+    <script src="./js/test.js"></script>
+    <script src="./js/point.js"></script>
     <script src="./js/myjs.js"></script>
 </body>
 </html>
